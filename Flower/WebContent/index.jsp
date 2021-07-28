@@ -1,6 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
 <head>
 
     <meta charset="utf-8">
@@ -38,8 +37,8 @@
 			   <ul class="nav navbar-nav navbar-right">
 				<li><a href="#about">꽃추천</a></li>
 				<li><a href="#portfolio">상품</a></li>
-				<li><a href="#">로그인</a></li>
-				<li><a href="#">회원가입</a></li>
+				<li><a href="Login.jsp">로그인</a></li>
+				<li><a href="join.jsp">회원가입</a></li>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
