@@ -83,8 +83,8 @@ public class memberDAO {
 			conn();
 			String sql = "select * from web_member where email=? and pw=?";
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1, getemail);
-			psmt.setString(2, getpw);
+			psmt.setString(2, getemail);
+			psmt.setString(3, getpw);
 			rs= psmt.executeQuery();
 			if(rs.next()) {
 				int member_number = rs.getInt(1);
