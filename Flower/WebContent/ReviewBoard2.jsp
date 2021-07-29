@@ -16,7 +16,9 @@
     <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/ReviewBoardStyle.css" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css" />
+<style>
 
+</style>
 </head>
 
 <body>
@@ -76,23 +78,53 @@
 
     <h1 class="con"></h1>
     <section class="article-list table-common con">
-    	<div id="wrapper">
+      </section>
+        <div id="wrapper">
 				<!-- Menu -->
 					<nav id="Update">	
-						<ul class="actions vertical">
-							<li><h5>회원정보수정</h5></li>
-								<form action="index.jsp" method="post">
-									<li>아이디 띄우는 창</li>
-									<li><p>비밀번호<input type="password" name="pw" placeholder="PW를 입력하세요" style="width: 500px; margin: 0 auto;"></p></li>
-									<li><p>전화번호<input type="text" name="tel"placeholder="전화번호를 입력하세요" style="width: 500px; margin: 0 auto;"></p></li>
-									<li><p>주소<input type="text" name="addr"placeholder="집주소를 입력하세요" style="width: 500px; margin: 0 auto;"></p></li>
-									<li><input type="submit" value="메인으로" class="button fit" style="width: 500px; margin: 0 auto;" ></li>
-								</form>
-						</ul>
-					</nav>			
+						<table>
+							<caption><h2>리뷰게시판</h2></caption>
+							<tr>
+								<td>글번호</td>
+								<td>제목</td>
+								<td>작성자</td>	
+								<td>평점</td>						
+							</tr>
+							
+							 
+								<tr>
+									<td>1</td>
+									<td>꽃 완전 대박이에요</td>
+									<td>김아무개</td>		
+									<td>4</td>					
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>꽃 완전 대박이에요</td>
+									<td>김아무개</td>		
+									<td>4</td>					
+								</tr>
+								 
+								 <tr>
+									<td>1</td>
+									<td>꽃 완전 대박이에요</td>
+									<td>김아무개</td>		
+									<td>4</td>					
+								</tr>
+								 
+								 <tr>
+									<td>1</td>
+									<td>꽃 완전 대박이에요</td>
+									<td>김아무개</td>		
+									<td>4</td>					
+								</tr>
+								 
+								 
+							<!-- 2.모든 회원의 이메일(email),전화번호(tel),주소(address)를 출력하시오. -->
+						</table>
+					</nav>		
+						
 			</div>
-      </section>
-      
   
 
    

@@ -37,7 +37,7 @@
 			   <ul class="nav navbar-nav navbar-right">
 				<li><a href="#about">꽃추천</a></li>
 				<li><a href="#portfolio">상품</a></li>
-				<li><a href="Login.jsp">로그인</a></li>
+				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
