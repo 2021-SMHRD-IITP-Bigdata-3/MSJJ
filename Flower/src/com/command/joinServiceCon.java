@@ -26,6 +26,7 @@ public class joinServiceCon extends HttpServlet {
 		String birthday = request.getParameter("birthday");
 		String tel = request.getParameter("tel");
 		
+		
 		System.out.println("member_number :"+member_number);
 		System.out.println("email :"+email);
 		System.out.println("pw :"+pw);

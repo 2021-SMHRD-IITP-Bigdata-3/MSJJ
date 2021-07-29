@@ -1,3 +1,0 @@
-creat table member(
-
-)

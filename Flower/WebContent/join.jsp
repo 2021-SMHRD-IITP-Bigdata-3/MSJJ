@@ -12,7 +12,7 @@
 	<body>
         <!-- header -->
         <div id="header">
-            <a href="index.html" target="_blank" title="네이버 회원가입 페이지 보러가기"><img src="hqdefault.jpg" id="logo"></a>
+            <a href="index.jsp" target="_blank" title="네이버 회원가입 페이지 보러가기"><img src="hqdefault.jpg" id="logo"></a>
         </div>
 
 
@@ -131,10 +131,11 @@
 
 
                 <!-- JOIN BTN-->
-                <div class="btn_area">
-                    <button type="button" id="btnJoin">
+                <div class="btn_area"><a href="Login.jsp">
+                    <button type="button" id="btnJoin" >
                         <span>가입하기</span>
                     </button>
+                    </a>
                 </div>
 
                 

@@ -83,18 +83,18 @@ public class memberDAO {
 			conn();
 			String sql = "select * from web_member where email=? and pw=?";
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(2, getemail);
-			psmt.setString(3, getpw);
+			psmt.setString(1, email);
+			psmt.setString(2, pw);
 			rs= psmt.executeQuery();
 			if(rs.next()) {
 				int member_number = rs.getInt(1);
-				String email = rs.getString(2);
-				String pw = rs.getString(3);
+				String getemail = rs.getString(2);
+				String getpw = rs.getString(3);
 				String addr = rs.getString(4);
 				String birthday = rs.getString(5);
 				String tel = rs.getString(6);
 				
-				info = new memberDTO(member_number, email, pw, addr, birthday, tel);
+				info = new memberDTO(member_number, getemail, getpw, addr, birthday, tel);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
