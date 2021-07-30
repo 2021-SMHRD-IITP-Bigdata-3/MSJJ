@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+
 
 import com.sun.corba.se.spi.legacy.connection.GetEndPointInfoAgainException;
 
@@ -56,7 +58,7 @@ public class memberDAO {
 	         // DB 연결 메소드 호출
 	         conn();
 	         
-	         String sql = "insert into web_member values(?,?,?,?,?,?)";
+	         String sql = "insert into member values(?,?,?,?,?,?)";
 	         
 	         psmt =  conn.prepareStatement(sql);
 	         
@@ -81,7 +83,7 @@ public class memberDAO {
 	public memberDTO login(String email, String pw) {
 		try {
 			conn();
-			String sql = "select * from web_member where email=? and pw=?";
+			String sql = "select * from member where email=? and pw=?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, email);
 			psmt.setString(2, pw);
@@ -103,5 +105,54 @@ public class memberDAO {
 		}return info;
 		
 	}
+	public int update(memberDTO dto) {
+		try {
+			conn();
+			String sql = "update member set pw=?, tel=?, addr =? where email =?";
+			psmt=conn.prepareStatement(sql);
+			psmt.setString(1, dto.getPw());
+			psmt.setString(2, dto.getTel());
+			psmt.setString(3, dto.getAddr());
+			psmt.setString(4, dto.getEmail());
+			
+			cnt=psmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}return cnt;
+		
+	}
+	public ArrayList<memberDTO> showMember() {
+		
+		ArrayList<memberDTO> list = new ArrayList<memberDTO>();
+		try {
+			conn();
+			String sql = "select * from member";
+			
+			psmt=conn.prepareStatement(sql);
+			rs =psmt.executeQuery();
+			
+			while(rs.next()) {
+				int member_number= rs.getInt("member_number");
+				String email=rs.getString("email");
+				String pw=rs.getString("pw");
+				String addr=rs.getString("addr");
+				String birthday= rs.getString("birthday");
+				String tel=rs.getString("tel");
+				
+				
+				memberDTO dto = new memberDTO(email, pw, tel, addr);
+				list.add(dto);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			close();
+		}return list;
+		
 	
+	}	
 }

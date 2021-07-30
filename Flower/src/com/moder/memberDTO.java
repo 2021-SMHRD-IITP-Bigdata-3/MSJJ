@@ -16,6 +16,13 @@ public class memberDTO {
 		this.birthday = birthday;
 		this.tel = tel;
 	}
+	public memberDTO(String email, String pw, String addr, String tel) {
+		super();
+		this.email = email;
+		this.pw = pw;
+		this.addr = addr;
+		this.tel = tel;
+	}
 	public int getMember_number() {
 		return member_number;
 	}
