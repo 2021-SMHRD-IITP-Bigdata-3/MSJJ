@@ -83,10 +83,10 @@
 							<li><h5>회원정보수정</h5></li>
 								<form action="index.jsp" method="post">
 									<li>아이디 띄우는 창</li>
-									<li><p>비밀번호<input type="password" name="pw" placeholder="PW를 입력하세요" style="width: 500px; margin: 0 auto;"></p></li>
-									<li><p>전화번호<input type="text" name="tel"placeholder="전화번호를 입력하세요" style="width: 500px; margin: 0 auto;"></p></li>
-									<li><p>주소<input type="text" name="addr"placeholder="집주소를 입력하세요" style="width: 500px; margin: 0 auto;"></p></li>
-									<li><input type="submit" value="메인으로" class="button fit" style="width: 500px; margin: 0 auto;" ></li>
+									<li><p>비밀번호<input type="password" name="pw" placeholder="PW를 입력하세요" style="width: 500px; margin: 0 auto; background-color:white; color:gray;"></p></li>
+									<li><p>전화번호<input type="text" name="tel"placeholder="전화번호를 입력하세요" style="width: 500px; margin: 0 auto; background-color:white; color:gray;"></p></li>
+									<li><p>주소<input type="text" name="addr"placeholder="집주소를 입력하세요" style="width: 500px; margin: 0 auto; background-color:white; color:gray;"></p></li>
+									<li><input type="submit" value="수정완료" class="button fit" style="width: 500px; margin: 0 auto;" ></li>
 								</form>
 						</ul>
 					</nav>			

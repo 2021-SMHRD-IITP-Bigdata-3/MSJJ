@@ -20,16 +20,16 @@
 </head>
 
 <body>
-
-	<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
 				<div class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">	
 					<span class="bar1"></span>
 					<span class="bar2"></span>
 					<span class="bar3"></span>
-			  </div>
-				<a class="navbar-brand top" href="#">
+			  
+			  <div>
+				<a class="navbar-brand top" href="index.jsp">
 					<img src="img/logo.png" alt="">
 				</a>
 
@@ -37,14 +37,14 @@
 
 			<div class="collapse navbar-collapse" id="main-menu">
 			   <ul class="nav navbar-nav navbar-right">
-				<li><a href="#about">꽃추천</a></li>
-				<li><a href="#portfolio">상품</a></li>
-				<li><a href="Login.jsp">마이페이지</a></li>
-				<li><a href="join.jsp">로그아웃</a></li>
+				<li><a href="Choiceflower.jsp">꽃추천</a></li>
+				<li><a href="Market2.jsp">상품</a></li>
+				<li><a href="login.jsp">로그인</a></li>
+				<li><a href="join.jsp">회원가입</a></li>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
-	</nav>
+		</nav>
   
 
 
@@ -113,10 +113,7 @@
 						<br>
 						
 						<form>
-							<span>
-								<input type="radio" value="take">방문
-								<input type="radio" value="take">배달
-							</span>
+							
 							<br>
 							<span><input type="submit" value="결제하기"></span>
 							<br>
@@ -130,7 +127,7 @@
 					<p style="text-align: right;">
 					
 					
-					가격
+					
 					
 					
 					</p>
