@@ -28,7 +28,7 @@
 					<span class="bar3"></span>
 			  </div>
 				<a class="navbar-brand top" href="#">
-					<img src="img/logo.png" alt="">
+					<img src="img/logo.png"alt="">
 				</a>
 
 			</div>
