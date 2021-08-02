@@ -20,7 +20,7 @@
 .rows_indi_item:after{
 content:"";
 display:block;
-cloear:both;
+clear:both;
 }
 i.discount-ico{
 display:inline-block;
@@ -65,9 +65,9 @@ margin-top: -400px;
 
 			<div class="collapse navbar-collapse" id="main-menu">
 			   <ul class="nav navbar-nav navbar-right">
-				<li><a href="#about">꽃추천</a></li>
-				<li><a href="#portfolio">상품</a></li>
-				<li><a href="Login.jsp">로그인</a></li>
+				<li><a href="Choiceflower.jsp">꽃추천</a></li>
+				<li><a href="Market2.jsp">상품</a></li>
+				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
@@ -90,10 +90,39 @@ margin-top: -400px;
 
 	
 	<!-- Slider -->
+	<section class="slider">
+		<div class="container-fluid">
+			<div class="row no-gutter">
+				<div class="col-lg-12">
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner" role="listbox">
+						<div class="item active">
+						  <img src="img/slide-1.jpg" alt="slide">
+						</div>
+
+						<div class="item">
+						  <img src="img/slide-2.jpg" alt="slide">
+						</div>
+
+						<div class="item">
+						  <img src="img/slide-3.jpg" alt="slide">
+						</div>
+
+						<div class="item">
+						  <img src="img/slide-4.jpg" alt="slide">
+						</div>
+					  </div>
+					  
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	
-	<a>꽃송이</a>    <a>꽃다발</a>   <a>꽃바구니</a>    <a>꽃상자</a>
 	
-	<div class="urban_main_visual" style="width:100%; height:629px; background:url(/urbanflower/images/001.jpg?v=2021076173050884) center top no-repeat"> </div>
+	
 	<div class="urban_list_contents" style="width:100%; clear:both;">
 	<div class="rows navi_category" style="width:1000px; margin:0 auto">
 	<div style="width:650px; float:left;">
@@ -110,12 +139,12 @@ margin-top: -400px;
 		</div>
 		</div>
 		<!-- 상품 사진 for문  -->
-		<div class = "" style = "width :1000px; margin:0 auto; text-align:left; clear:both; position:relative;">
+		<div class = "rows hover_bg" style = "width :1000px; margin:0 auto; text-align:left; clear:both; position:relative;">
       <a href = "Order.jsp">
-         <div class = "rows hover_bg"></div>
+         <br><br><br>
 
       <div class = "rows_indi_item">
-         <div style = "width:739px; float:right text-align:center">
+         <div style = "width:739px; float:right; text-align:center"><a href="Order.jsp">
             <img src = "orderflower.jpg"  width="739" height="400">
          </div>
          <div style = "width:261px; float:left; text-align:center; display: table; height:100%">
@@ -126,7 +155,7 @@ margin-top: -400px;
             <br>
             <span style="font-size: 14px; color: #EA604F;">여름에 가장 어울리는꽃</span>
             <div class="clearboth" style="padding:10px 5px 0px 5px; font-size:20px;">48000</div>
-            
+            </a>
             </div>
          </div>
       </div>
@@ -135,63 +164,7 @@ margin-top: -400px;
 	<!-- About ì£¼ë¬¸ìí ê·¸ë¦¼& ì¤ëª-->
 	
 	<section class="about" id="about">
-		<div class="container about">
-			<div class="row">
-				<div class="col-md-6 big-letter">
-					<a>
-						<img src="orderflower.jpg" width = "400px" height= "400px">
-					</a>
-					<br>
-					<p>
-						상품이름 :
-						<br>
-						상품가격  :
-						<br>
-						매장이름 :
-						<br>
-						</p>
-						
-					
-					
-					<a>
-					<img src="orderflower.jpg" width = "400px" height= "400px">
-					</a>
-					<p>
-						상품이름  :
-						<br>
-						상품가격  :
-						<br>
-						매장이름 :
-						<br>
-						<p>
-						
-					</p>
-					<a>
-					<img src="orderflower.jpg" width = "400px" height= "400px">
-					</a>
-					<br>
-					<p>
-						상품이름 :
-						<br>
-						상품가격  :
-						<br>
-						매장이름 :
-						<br>
-						
-						
-						
-					</p>
-				</div>
-				<div class="col-md-6">
-					<p style="text-align: right;">
-					
-					
-					
-					
-					
-					</p>
-					<br>
-					
+		
 				</div>
 			</div>
 		</div>
@@ -212,29 +185,7 @@ margin-top: -400px;
 	<!-- End Gallery -->
 
 	
-	<div class="container">
-	  <div class="modal fade and carousel slide" id="mybox">
-		<div class="modal-dialog">
-		  <div class="modal-content">
-			<div class="modal-body">
-			  
-			  <button class="close" data-dismiss="modal" type="button">Ã</button>
-			  
-			  
-			  <div class="carousel-inner">
-					<div class="item active">
-					  <img src="img/1.jpg" alt="slide">
-					</div>
-					<div class="item">
-					  <img src="img/2.jpg" alt="slide">
-					</div>
-					<div class="item">
-					  <img src="img/3.jpg" alt="slide">
-					</div>
-					<div class="item">
-					  <img src="img/4.jpg" alt="slide">
-					</div>
-			  </div><!-- /.carousel-inner -->
+	
 			  
 			  
 			  <a class="left carousel-control" href="#mybox" role="button" data-slide="prev">
@@ -255,25 +206,7 @@ margin-top: -400px;
 	
 	
 	<!-- Press -->
-	<section class="press" id="press">
-		<div class="container about">
-			<div class="row">
-				<div class="col-md-4">
-					
-				</div>
-				
-				
-				<div class="col-md-4">
-					
-				</div>
-				
-				
-				<div class="col-md-4">
-					
-				</div>
-			</div>
-		</div>
-	</section>
+	
 	
 	
 	<!-- Brand -->
