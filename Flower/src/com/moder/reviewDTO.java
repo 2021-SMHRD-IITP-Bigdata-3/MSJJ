@@ -1,5 +1,7 @@
 package com.moder;
 
+import javax.management.loading.PrivateClassLoader;
+
 public class reviewDTO {
 	private int borad_number;
 	private String borad_name;
@@ -8,9 +10,9 @@ public class reviewDTO {
 	private String borad_content;
 	private String borad_member;
 	private String borad_date;
-	
+	private String borad_score;
 	public reviewDTO(int borad_number, String borad_name, int borad_flower, int borad_store, String borad_content,
-			String borad_member, String borad_date) {
+			String borad_member, String borad_date, String borad_score) {
 		super();
 		this.borad_number = borad_number;
 		this.borad_name = borad_name;
@@ -19,6 +21,7 @@ public class reviewDTO {
 		this.borad_content = borad_content;
 		this.borad_member = borad_member;
 		this.borad_date = borad_date;
+		this.borad_score = borad_score;
 	}
 	public int getBorad_number() {
 		return borad_number;
@@ -61,6 +64,12 @@ public class reviewDTO {
 	}
 	public void setBorad_date(String borad_date) {
 		this.borad_date = borad_date;
+	}
+	public String getBorad_score() {
+		return borad_score;
+	}
+	public void setBorad_score(String borad_score) {
+		this.borad_score = borad_score;
 	}
 	
 	

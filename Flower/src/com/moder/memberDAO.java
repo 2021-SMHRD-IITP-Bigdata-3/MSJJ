@@ -130,7 +130,6 @@ public class memberDAO {
 		try {
 			conn();
 			String sql = "select * from member";
-			
 			psmt=conn.prepareStatement(sql);
 			rs =psmt.executeQuery();
 			
@@ -141,8 +140,6 @@ public class memberDAO {
 				String addr=rs.getString("addr");
 				String birthday= rs.getString("birthday");
 				String tel=rs.getString("tel");
-				
-				
 				memberDTO dto = new memberDTO(email, pw, tel, addr);
 				list.add(dto);
 			}

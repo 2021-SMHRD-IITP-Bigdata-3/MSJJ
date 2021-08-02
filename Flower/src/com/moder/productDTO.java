@@ -10,11 +10,11 @@ public class productDTO {
 	private String product_image;
 	private String product_mean;
 	private String product_purpose;
-	private int product_store;
+	private int product_Store;
+	
 	public productDTO(int product_number, String product_flower, String product_name, int product_price,
 			String product_stock, String product_image, String product_mean, String product_purpose,
 			int product_store) {
-		super();
 		this.product_number = product_number;
 		this.product_flower = product_flower;
 		this.product_name = product_name;
@@ -23,7 +23,7 @@ public class productDTO {
 		this.product_image = product_image;
 		this.product_mean = product_mean;
 		this.product_purpose = product_purpose;
-		this.product_store = product_store;
+		this.product_Store = product_store;
 	}
 	public int getProduct_number() {
 		return product_number;
@@ -74,10 +74,10 @@ public class productDTO {
 		this.product_purpose = product_purpose;
 	}
 	public int getProduct_store() {
-		return product_store;
+		return product_Store;
 	}
 	public void setProduct_store(int product_store) {
-		this.product_store = product_store;
+		this.product_Store = product_store;
 	}
 	
 	

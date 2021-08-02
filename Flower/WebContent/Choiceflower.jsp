@@ -114,10 +114,10 @@
 	<h1>포장고르기</h1>
 	
 	
-	<label><input type="radio"><img src= "pojangji.png"></label>
-	<label><input type="radio"><img src= "pojangji.png"></label>
-	<label><input type="radio"><img src= "pojangji.png"></label>
-	<label><input type="radio"><img src= "pojangji.png"></label>
+	<label><input type="radio" name="s"><img src= "pojangji.png"></label>
+	<label><input type="radio" name="s"><img src= "pojangji.png"></label>
+	<label><input type="radio" name="s"><img src= "pojangji.png"></label>
+	<label><input type="radio" name="s"><img src= "pojangji.png"></label>
 	<br>
 	
 	<a>

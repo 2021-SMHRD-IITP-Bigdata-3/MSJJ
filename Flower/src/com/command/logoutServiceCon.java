@@ -19,7 +19,6 @@ public class logoutServiceCon extends HttpServlet {
 		
 		session.removeAttribute("info");
 		
-		
 		response.sendRedirect("main.jsp");
 	}
 

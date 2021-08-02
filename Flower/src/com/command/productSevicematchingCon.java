@@ -1,7 +1,6 @@
 package com.command;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,35 +10,37 @@ import javax.servlet.http.HttpSession;
 
 import com.moder.memberDAO;
 import com.moder.memberDTO;
+import com.moder.productDAO;
+import com.moder.productDTO;
 
-@WebServlet("/UpdateServiceCon")
-public class UpdateServiceCon extends HttpServlet {
+
+@WebServlet("/productSevicematchingCon")
+public class productSevicematchingCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		request.setCharacterEncoding("EUC-KR");
 		
+		String product_number = request.getParameter("product_number");
+		String product_purpose = request.getParameter("product_purpose");
+		System.out.println("product_number :"+product_number);
 		
-		String pw = request.getParameter("pw");
-		String addr = request.getParameter("addr");
-		String tel = request.getParameter("tel");
 		
+		productDAO dao = new productDAO();
+		productDTO info = dao.matching(product_number, product_purpose);
 		
-		HttpSession session = request.getSession();
-		memberDTO info = (memberDTO)session.getAttribute("info");
-		String email = info.getEmail();
-		info= new memberDTO(email, pw, addr,tel);
-		memberDAO dao = new memberDAO();
-		int cnt = dao.update(info);
-		
-		if(cnt>0) {
-			System.out.println("회원 정보 수정");
-			//수정된 info값으로 session 덮어쓰기
+		if(info != null) {
+			System.out.println("로그인 성공");
+			HttpSession session = request.getSession();
 			session.setAttribute("info", info);
 		}else {
-			System.out.println("회원 정보 주정 실패");
+			System.out.println("로그인 실패");
 		}
 		response.sendRedirect("main.jsp");
 	}
+		
+		
+		
+	}
 
-}
+
