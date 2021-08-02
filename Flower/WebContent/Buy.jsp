@@ -37,8 +37,8 @@
 
 			<div class="collapse navbar-collapse" id="main-menu">
 			   <ul class="nav navbar-nav navbar-right">
-				<li><a href="Choiceflower.jsp">꽃추천</a></li>
-				<li><a href="Market2.jsp">상품</a></li>
+				<li><a href="Choiceflower.jsp">꽃추천</a></li>
+				<li><a href="Market2.jsp">상품</a></li>
 				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
 			  </ul>

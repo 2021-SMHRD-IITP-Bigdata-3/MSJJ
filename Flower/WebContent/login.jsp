@@ -10,9 +10,7 @@
 		<div class="main-wrap">
 		<header>
 			<div class="sel-lang-wrap">
-				<select class="lang-select">
-					<option>한국어</option>
-					<option>English</option>
+				
 				</select>
 			</div>
 			<div class="logo-wrap">
@@ -34,18 +32,10 @@
 				<span>Stay Signed in</span>
 			</div>
 		</section>
-		<section class="Easy-sgin-in-wrap">
-			<h2>Easier sign in</h2>
-			<ul class="sign-button-list">
-				<li><button><i class="fas fa-qrcode"></i><span>Sign in with QR code</span></button></li>
-				<li><button><i class="fab fa-facebook-square"></i><span>Facebook</span></button></li>
-				<li><button><i class="fab fa-line"></i><span>line</span></button></li>
-			</ul>
-			<p class="forget-msg">Forgot your Username or Password? | Sign up</p>
-		</section>
+		
 		<footer>
 			<div class="copyright-wrap">
-			<span>	</a><img src="img/logo.png"> Copyright © NAVER Corp. All Rights Reserved.</span>
+			
 			</div>
 		</footer>
 		</div>
