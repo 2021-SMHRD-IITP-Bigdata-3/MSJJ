@@ -117,7 +117,7 @@
 							<br>
 							<span><input type="submit" value="결제하기"></span>
 							<br>
-							<span>꽃말 asdfasdfasdfasdfasdfasdfasdfasdfasdfasdf</span>
+							<span>꽃말 띄워주는 부분</span>
 							
 						</form>
 						
