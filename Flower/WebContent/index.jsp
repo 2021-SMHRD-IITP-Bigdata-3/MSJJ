@@ -28,15 +28,15 @@
 					<span class="bar3"></span>
 			  </div>
 				<a class="navbar-brand top" href="#">
-					<img src="img/logo.png" alt="">
+					<img src="img/logo.png"alt="">
 				</a>
 
 			</div>
 
 			<div class="collapse navbar-collapse" id="main-menu">
 			   <ul class="nav navbar-nav navbar-right">
-				<li><a href="#about">꽃추천</a></li>
-				<li><a href="#portfolio">상품</a></li>
+				<li><a href="Choiceflower.jsp">꽃추천</a></li>
+				<li><a href="Market2.jsp">상품</a></li>
 				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
 			  </ul>
@@ -132,7 +132,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-1"></div>
-							<a href="#mybox" data-toggle="modal" data-slide-to="0">
+							<a href="Market2.jsp">
 								<div class="overlay">
 									<h2>꽃을 보니 니가 생각나서..</h2>
 									<p>꽃한송이</p> 
@@ -145,7 +145,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-2"></div>
-							<a href="#mybox" data-toggle="modal" data-slide-to="1">
+							<a href="Market2.jsp">
 								<div class="overlay">
 									<h2>오늘 너의 건치가 보고싶어서..</h2>
 									<p>꽃다발</p> 
@@ -165,7 +165,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-3"></div>
-							<a href="#mybox" data-toggle="modal" data-slide-to="2">
+							<a href="Market2.jsp">
 								<div class="overlay">
 									<h2>혹시 과일이 더 좋아?..</h2>
 									<p>꽃바구니</p> 
@@ -178,7 +178,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-4"></div>
-							<a href="#mybox" data-toggle="modal" data-slide-to="3">
+							<a href="Market2.jsp">
 								<div class="overlay">
 									<h2>오해는 하지 말아줘..  </h2>
 									<p>꽃 상자</p> 
