@@ -1,3 +1,4 @@
+<%@page import="com.moder.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,6 +49,12 @@ margin-top: -400px;
 </head>
 
 <body>
+<%
+	memberDTO info = (memberDTO)session.getAttribute("info");
+	
+	
+	
+%>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -56,19 +63,26 @@ margin-top: -400px;
 					<span class="bar1"></span>
 					<span class="bar2"></span>
 					<span class="bar3"></span>
-			  </div>
-				<a class="navbar-brand top" href="index.jsp">
-					<img src="img/logo.png" alt="">
+			  </div class="navbar-brand top">
+				<a  href="index.jsp">
+					<img src="img/logo.png">
 				</a>
 
 			</div>
 
 			<div class="collapse navbar-collapse" id="main-menu">
 			   <ul class="nav navbar-nav navbar-right">
+				<%if(info != null){ %>
+			   <li><a href="Choiceflower.jsp">꽃추천</a></li>
+				<li><a href="Market2.jsp">상품</a></li>
+				<li><a href="Mypage.jsp">마이페이지</a></li>
+				<li><a href="logoutServiceCon">로그아웃</a></li>
+			   <%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
 				<li><a href="Market2.jsp">상품</a></li>
 				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
+				<%} %>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->

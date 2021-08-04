@@ -29,14 +29,17 @@ public class loginServiceCon extends HttpServlet {
 		memberDAO dao = new memberDAO();
 		memberDTO info = dao.login(email, pw);
 		
+		String moveURL = "";
 		if(info != null) {
 			System.out.println("로그인 성공");
 			HttpSession session = request.getSession();
 			session.setAttribute("info", info);
+			moveURL = "index.jsp";
 		}else {
 			System.out.println("로그인 실패");
+			moveURL = "login.jsp";
 		}
-		response.sendRedirect("main.jsp");
+		response.sendRedirect(moveURL);
 	}
 	
 

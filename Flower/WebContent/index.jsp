@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.moder.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <head>
@@ -18,6 +20,12 @@
 </head>
 
 <body>
+<%
+	memberDTO info = (memberDTO)session.getAttribute("info");
+	
+	
+	
+%>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -35,10 +43,17 @@
 
 			<div class="collapse navbar-collapse" id="main-menu">
 			   <ul class="nav navbar-nav navbar-right">
+			   <%if(info != null){ %>
+			   <li><a href="Choiceflower.jsp">꽃추천</a></li>
+				<li><a href="Market2.jsp">상품</a></li>
+				<li><a href="Mypage.jsp">마이페이지</a></li>
+				<li><a href="logoutServiceCon">로그아웃</a></li>
+			   <%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
 				<li><a href="Market2.jsp">상품</a></li>
 				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
+				<%} %>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
@@ -60,65 +75,11 @@
 
 	
 	<!-- Slider -->
-	<section class="slider">
-		<div class="container-fluid">
-			<div class="row no-gutter">
-				<div class="col-lg-12">
-					<div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner" role="listbox">
-						<div class="item active">
-						  <img src="img/slide-1.jpg" alt="slide">
-						</div>
-
-						<div class="item">
-						  <img src="img/slide-2.jpg" alt="slide">
-						</div>
-
-						<div class="item">
-						  <img src="img/slide-3.jpg" alt="slide">
-						</div>
-
-						<div class="item">
-						  <img src="img/slide-4.jpg" alt="slide">
-						</div>
-					  </div>
-					  
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	
 	
 	
 	<!-- About -->
-	<section class="about" id="about">
-		<div class="container about">
-			<div class="row">
-				<div class="col-md-6 big-letter">
-					<p>
-						꽃 추천페이지 버튼 
-					</p>
-					<br>
-					<p>
-						Vestibulum tempor velit nibh, nec finibus lectus ultrices sodales. Aliquam pellentesque nisl et maximus egestas. Vivamus accumsan, sem ut viverra
-						ullamcorper, neque ligula laoreet justo, non semper nunc mauris mattis lorem. Maecenas finibus non ipsum ullamcorper vehicula.
-					</p>
-				</div>
-				<div class="col-md-6">
-					<p>
-						Aliquam pellentesque nisl et maximus egestas. Vivamus accumsan, sem ut viverra ullamcorper, neque ligula laoreet justo, 
-						non semper nunc mauris mattis lorem. Quisque maximus vel nibh non tincidunt. Mauris felis felis, porta 
-						vitae sem sed, auctor consequat diam. Sed eu magna ultricies, convallis elit vel, lacinia ante. Vestibulum tempor velit 
-						nibh, nec finibus lectus ultrices sodales
-					</p>
-					<br>
-					<img class="pull-right" src="img/signature.jpg" alt="signature">
-				</div>
-			</div>
-		</div>
-	</section>
+	
 	
 
 	
@@ -191,11 +152,103 @@
 			</div>
 		</div>	
 	</section>
+	<section class="about" id="about">
+		<div class="container about">
+			<div class="row">
+				<div class="col-md-6 big-letter">
+					<p>
+						꽃 추천페이지 버튼 
+					</p>
+					<br>
+					<p>
+						Vestibulum tempor velit nibh, nec finibus lectus ultrices sodales. Aliquam pellentesque nisl et maximus egestas. Vivamus accumsan, sem ut viverra
+						ullamcorper, neque ligula laoreet justo, non semper nunc mauris mattis lorem. Maecenas finibus non ipsum ullamcorper vehicula.
+					</p>
+				</div>
+				<div class="col-md-6">
+					<p>
+						Aliquam pellentesque nisl et maximus egestas. Vivamus accumsan, sem ut viverra ullamcorper, neque ligula laoreet justo, 
+						non semper nunc mauris mattis lorem. Quisque maximus vel nibh non tincidunt. Mauris felis felis, porta 
+						vitae sem sed, auctor consequat diam. Sed eu magna ultricies, convallis elit vel, lacinia ante. Vestibulum tempor velit 
+						nibh, nec finibus lectus ultrices sodales
+					</p>
+					<br>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="portfolio">
+		<div class="container">
+			<div class="row">
+			
+			
+				<div class="col-md-6 thumbnail">
+					<div class="hovereffect">
+						<div class="col-md-12 photo-5"></div>
+							<a href="Market2.jsp">
+								<div class="overlay">
+									<h2>꽃을 보니 니가 생각나서..</h2>
+									<p>꽃한송이</p> 
+								</div>
+							</a>
+					</div>
+				</div>
+				
+				
+				<div class="col-md-6 thumbnail">
+					<div class="hovereffect">
+						<div class="col-md-12 photo-6"></div>
+							<a href="Market2.jsp">
+								<div class="overlay">
+									<h2>오늘 너의 건치가 보고싶어서..</h2>
+									<p>꽃다발</p> 
+								</div>
+							</a>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+			
+			
+				<div class="col-md-6 thumbnail">
+					<div class="hovereffect">
+						<div class="col-md-12 photo-7"></div>
+							<a href="Market2.jsp">
+								<div class="overlay">
+									<h2>혹시 과일이 더 좋아?..</h2>
+									<p>꽃바구니</p> 
+								</div>
+							</a>
+					</div>
+				</div>
+				
+				
+				<div class="col-md-6 thumbnail">
+					<div class="hovereffect">
+						<div class="col-md-12 photo-8"></div>
+							<a href="Market2.jsp">
+								<div class="overlay">
+									<h2>오해는 하지 말아줘..  </h2>
+									<p>꽃 상자</p> 
+								</div>
+							</a>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>	
+	</section>
 		
 	
 	<!-- End Gallery -->
 
-	
 	<div class="container">
 	  <div class="modal fade and carousel slide" id="mybox">
 		<div class="modal-dialog">
@@ -239,94 +292,11 @@
 	
 	
 	<!-- Press -->
-	<section class="press" id="press">
-		<div class="container about">
-			<div class="row">
-				<div class="col-md-4">
-					<h4>Presentations </h4>
-					<p><a href="#" target="_blank">Ducimus qui blanditiis </a></p>
-					<p>New York, April 2015</p>
-					<p>“Temporibus uit autem”</p>
-					<p><em>with Mark Riders</em></p>
-					
-					<br>
-					
-					<p><a href="#" target="_blank">Righteous and indignation</a></p>
-					<p>Madrid, November 2015</p>
-					<p>“Anyone who loves”</p>
-					<br>
-					
-					<h4>Publications</h4>
-					<p><a href="#" target="_blank">Deserunt mollitia animi 2016</a></p>
-					<p><a href="#" target="_blank">Vitae dicta : sunt explicabo</a></p>
-					<p>Voluptatem sequi nesciunt, Fall 2015</p>
-					<p>Sunt in culpa qui deserunt, Spring 2015</p>
-					<p><a href="#" target="_blank">Who avoids and pain 4</a></p>
-					<p><a href="#" target="_blank">Desires to obtain 1</a></p>
-				</div>
-				
-				
-				<div class="col-md-4">
-					<h4>Premiations </h4>
-					<p><a href="#" target="_blank">Magnam, 2015</a>: Best User</p>
-					<p><a href="#" target="_blank">Information Awards, 2014</a>: Gold </p>
-					<p><a href="#" target="_blank">One Man Show, 2015</a>: Platinum Arch</p>
-					<p><a href="#" target="_blank"><em>Mximus vel nibh</em>Innovation Awards, 2015</a></p>
-					<p><a href="#" target="_blank">Tincidunt idea 2016</a>: Gold Place</p>
-					<br><br>
-							  
-							  
-					<h4>More about me</h4>
-					<p><a href="#" target="_blank">Cupiditate non provident 2015</a></p>
-					<p><a href="#" target="_blank">Quis nostrum : exercitationem</a></p>
-					<p>Neque porro quisquam est, Fall 2015</p>
-					<p>Pellentesque nisl et maximus 2015</p>
-					<p><a href="#" target="_blank">Dolore magnam 30</a></p>
-					<p><a href="#" target="_blank">Architecto beatae 26</a></p>
-					<p><a href="#" target="_blank">Sit cras amet bibendum</a></p>
-					<p><a href="#" target="_blank">Emper nunc mauris</a></p>
-				</div>
-				
-				
-				<div class="col-md-4">
-					<h4>Recognition </h4>
-						<p>
-							Aliquam pellentesque nisl et maximus egestas.  <a href="#" target="_blank">nunc mauris</a> maximus vel <a href="#">maximus ipsum egestas lorem</a>. 
-							Cras scelerisque rhoncus nulla sit amet bibendum <em>because</em> Quisque maximus vel nibh non <em>tincidunt</em> non semper nunc mauris mattis lorem <em>pellentesque</em> nisl et maximus egestas. Vivamus accumsan, sem ut viverra ullamcorper, neque ligula laoreet justo.
-						</p>
-					<br>
-						 
-					<h4>Contact </h4>
-					<p>Nicola Tolin Web Design</p>
-					<p>Allaroud Road 2903</p>
-					<p>Madison Square, New York</p>
-					<p><a href="mailto:info@nicolatolin.com">info@nicolatolin.com</a></p>
-					<br><br>
-				</div>
-			</div>
-		</div>
-	</section>
+	
 	
 	
 	<!-- Brand -->
-	<section id="brand">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-				   <ul class="logo-list list-inline text-center">
-					<li><a href="#" target="_blank"><img src="img/logos/logo1.jpg" alt="client logo" class="img-responsive"/></a></li>
-					<li><a href="#" target="_blank"><img src="img/logos/logo2.jpg" alt="client logo" class="img-responsive"/></a></li>
-					<li><a href="#" target="_blank"><img src="img/logos/logo3.jpg" alt="client logo" class="img-responsive"/></a></li>
-					<li><a href="#" target="_blank"><img src="img/logos/logo4.jpg" alt="client logo" class="img-responsive"/></a></li>
-					<li><a href="#" target="_blank"><img src="img/logos/logo5.jpg" alt="client logo" class="img-responsive"/></a></li>
-					<li><a href="#" target="_blank"><img src="img/logos/logo6.jpg" alt="client logo" class="img-responsive"/></a></li>
-					<li><a href="#" target="_blank"><img src="img/logos/logo7.jpg" alt="client logo" class="img-responsive"/></a></li>
-					<li><a href="#" target="_blank"><img src="img/logos/logo8.jpg" alt="client logo" class="img-responsive"/></a></li>
-				  </ul>
-				</div>
-			</div>
-		</div>
-	</section>
+	
 	
 	
 	<!-- Copyright -->

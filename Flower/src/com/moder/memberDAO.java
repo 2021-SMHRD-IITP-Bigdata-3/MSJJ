@@ -76,23 +76,24 @@ public class memberDAO {
 	      } return cnt;
 		
 	}
-	public memberDTO login(String email, String pw) {
+	public memberDTO login(String getemail, String getpw) {
 		try {
 			conn();
-			String sql = "select * from web_member where email=? and pw=?";
+			String sql = "select * from flower_member where member_email=? and member_password=?";
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(2, dto.getEmail());
-			psmt.setString(3, getpw);
+			psmt.setString(1, getemail);
+			psmt.setString(2, getpw);
+			
 			rs= psmt.executeQuery();
 			if(rs.next()) {
-				int member_number = rs.getInt(1);
+				
+				String name = rs.getString(1);
 				String email = rs.getString(2);
 				String pw = rs.getString(3);
-				String addr = rs.getString(4);
-				String birthday = rs.getString(5);
-				String tel = rs.getString(6);
+				String tel = rs.getString(4);
 				
-				info = new memberDTO(member_number, email, pw, addr, birthday, tel);
+				
+				info = new memberDTO( name, email, pw, tel);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

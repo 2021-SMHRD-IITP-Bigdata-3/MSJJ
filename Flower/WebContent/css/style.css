@@ -301,7 +301,9 @@ a:hover,a:focus {
 .hovereffect .photo-3,
 .hovereffect .photo-4,
 .hovereffect .photo-5,
-.hovereffect .photo-6{
+.hovereffect .photo-6,
+.hovereffect .photo-7,
+.hovereffect .photo-8{
   display: block;
   position: relative;
   max-width: none;
@@ -319,14 +321,16 @@ a:hover,a:focus {
 .hovereffect:hover .photo-3,
 .hovereffect:hover .photo-4,
 .hovereffect:hover .photo-5,
-.hovereffect:hover .photo-6{
+.hovereffect:hover .photo-6,
+.hovereffect:hover .photo-7,
+.hovereffect:hover .photo-8{
   opacity: 0.4;
   filter: alpha(opacity=40);
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
 
-.photo-1,.photo-2,.photo-3,.photo-4,.photo-5,.photo-6{
+.photo-1,.photo-2,.photo-3,.photo-4,.photo-5,.photo-6,.photo-7,.photo-8{
 	background-size:cover;
 	height:100vh;
 	width:100%;
@@ -335,12 +339,14 @@ a:hover,a:focus {
 
 /* Thumbnail Images*/
 
-.photo-1 {background-image: url('../img/1.jpg');}
+.photo-1 {background-image: url('orderflower.jpg');}
 .photo-2 {background-image: url('../img/2.jpg');}
 .photo-3 {background-image: url('../img/3.jpg');}
 .photo-4 {background-image: url('../img/4.jpg');}
-.photo-5 {background-image: url('../img/5.jpg');}
-.photo-6 {background-image: url('../img/6.jpg');}
+.photo-5 {background-image: url('gksthddl.jpg');}
+.photo-6 {background-image: url('ekqkf.jpg');}
+.photo-7 {background-image: url('bk.jpg');}
+.photo-8 {background-image: url('box.jpg');}
 
 /* Modal Box */
 
