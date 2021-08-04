@@ -19,33 +19,30 @@ public class joinServiceCon extends HttpServlet {
 		
 		request.setCharacterEncoding("EUC-KR");
 		
-		int member_number= Integer.parseInt(request.getParameter("member_number"));
 		String email = request.getParameter("email");
 		String pw = request.getParameter("pw");
-		String addr = request.getParameter("addr");
-		String birthday = request.getParameter("birthday");
+		String name = request.getParameter("name");
 		String tel = request.getParameter("tel");
 		
-		System.out.println("member_number :"+member_number);
+		
 		System.out.println("email :"+email);
 		System.out.println("pw :"+pw);
-		System.out.println("addr :"+addr);
-		System.out.println("birthday :"+birthday);
-		System.out.println("tle :"+tel);
+		System.out.println("name :"+name);
+		System.out.println("tel :"+tel);
 		
-		memberDTO dto = new memberDTO(member_number, email, pw, addr, birthday, tel);
+		memberDTO dto = new memberDTO(name, email, pw, tel);
 		memberDAO dao = new memberDAO();
 		int cnt = dao.join(dto);
 		
 		String moveURL ="";
-		if(cnt >0) {
-			System.out.println("회원가입 성공");
-			moveURL="join_success.jsp";
-			HttpSession session = request.getSession();
-			session.setAttribute("name", email);
+		if(cnt > 0) {
+				System.out.println("회원가입 성공");
+				moveURL="index.jsp";
+				HttpSession session = request.getSession();
+				session.setAttribute("name", email);
 		}else {
 			System.out.println("회원가입 실패");
-			moveURL="main.jsp";
+			moveURL="index.jsp";
 		}
 		response.sendRedirect(moveURL);
 		

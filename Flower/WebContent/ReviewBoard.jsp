@@ -29,7 +29,7 @@
 					<span class="bar2"></span>
 					<span class="bar3"></span>
 			  </div>
-				<a class="navbar-brand top" href="#">
+				<a class="navbar-brand top" href="index.jsp">
 					<img src="img/logo.png" alt="">
 				</a>
 

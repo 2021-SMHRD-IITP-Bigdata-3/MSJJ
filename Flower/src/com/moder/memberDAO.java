@@ -56,17 +56,15 @@ public class memberDAO {
 	         // DB 연결 메소드 호출
 	         conn();
 	         
-	         String sql = "insert into web_member values(?,?,?,?,?,?)";
+	     
+	         String sql = "insert into flower_member values(?,?,?,?)";
 	         
 	         psmt =  conn.prepareStatement(sql);
 	         
-	         
-	         psmt.setInt(1, dto.getMember_number());
+	         psmt.setString(1, dto.getName());
 	         psmt.setString(2, dto.getEmail());
 	         psmt.setString(3, dto.getPw());
-	         psmt.setString(4, dto.getAddr());
-	         psmt.setString(5, dto.getBirthday());
-	         psmt.setString(6, dto.getTel());
+	         psmt.setString(4, dto.getTel());
 	         
 	         cnt = psmt.executeUpdate();
 	             
@@ -83,7 +81,7 @@ public class memberDAO {
 			conn();
 			String sql = "select * from web_member where email=? and pw=?";
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(2, getemail);
+			psmt.setString(2, dto.getEmail());
 			psmt.setString(3, getpw);
 			rs= psmt.executeQuery();
 			if(rs.next()) {
