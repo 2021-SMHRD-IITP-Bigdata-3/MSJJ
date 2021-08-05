@@ -93,7 +93,7 @@ public class memberDAO {
 				String tel = rs.getString(4);
 				
 				
-				info = new memberDTO( name, email, pw, tel);
+				info = new memberDTO(name, email, pw, tel);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

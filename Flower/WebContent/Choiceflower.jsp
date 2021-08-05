@@ -76,16 +76,40 @@
 
 	
 	<!-- Slider -->
-	
-	<select name="">
-		<option value="">선물목적</option>
-		<option value="">선물목적1</option>
-		<option value="">선물목적2</option>
-		<option value="">선물목적3</option>
-	</select>
-	
+<form action = "recommServiceCon" method = "post">
+	<select name="eventday">
+		<option value="">기념일</option>
+		<option value="발렌타인데이">발렌타인데이</option>
+		<option value="화이트데이">화이트데이</option>
+		<option value="로즈데이">로즈데이</option>
+		<option value="성년의 날">성년의 날</option>
+		<option value="어버이날">어버이 날</option>
+		<option value="스승의날">스승의 날</option>
+		<option value="결혼기념일<">결혼기념일</option>
+		<option value="졸업식">졸업식</option>
 		
-
+	</select>
+	<select name="flowermean">
+		<option value="">꽃말</option>
+		<option value="당신의 앞날">당신의 앞날</option>
+		<option value="기적같은 사랑">기적같은 사랑</option>
+		<option value="사랑의 성공">사랑의 성공</option>
+		<option value="순수한 사랑">순수한 사랑</option>
+		<option value="신비로운 사랑">신비로운 사랑</option>
+		<option value="열렬한 사랑">열렬한 사랑</option>
+		<option value="영훤한 사랑">영원한 사랑</option>
+		<option value="최고의 사랑">최고의 사랑</option>
+		<option value="행복한 사랑">행복한 사랑</option>
+		<option value="첫사랑의 고백">첫사랑의 고백</option>
+		<option value="진심">진심</option>
+		<option value="우정">우정</option>
+		<option value="존경">존경</option>
+		<option value="감사">감사</option>
+		<option value="성공">성공</option>
+		
+	</select>
+	<input type = "submit" value = "선택">
+</form>
 	
 	
 	<!-- About 주문상품 그림& 설명-->
