@@ -77,8 +77,8 @@
 	
 	<!-- Slider -->
 <form action = "recommServiceCon" method = "post">
-	<select name="eventday">
-		<option value="">기념일</option>
+	<select name="eventDay">
+		<option value="미선택">기념일</option>
 		<option value="발렌타인데이">발렌타인데이</option>
 		<option value="화이트데이">화이트데이</option>
 		<option value="로즈데이">로즈데이</option>
@@ -87,10 +87,11 @@
 		<option value="스승의날">스승의 날</option>
 		<option value="결혼기념일<">결혼기념일</option>
 		<option value="졸업식">졸업식</option>
+		<option value="미선택">미선택</option>
 		
 	</select>
-	<select name="flowermean">
-		<option value="">꽃말</option>
+	<select name="flowerMean">
+		<option value="미선택">꽃말</option>
 		<option value="당신의 앞날">당신의 앞날</option>
 		<option value="기적같은 사랑">기적같은 사랑</option>
 		<option value="사랑의 성공">사랑의 성공</option>
@@ -106,6 +107,7 @@
 		<option value="존경">존경</option>
 		<option value="감사">감사</option>
 		<option value="성공">성공</option>
+		<option value="미선택">미선택</option>
 		
 	</select>
 	<input type = "submit" value = "선택">

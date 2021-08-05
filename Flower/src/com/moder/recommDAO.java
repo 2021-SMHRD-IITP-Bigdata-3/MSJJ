@@ -52,29 +52,48 @@ public class recommDAO {
 	}
 	
 // 
-	public ArrayList<mixDTO> recomm_mix(String eventday, String flowermean) {
+	public ArrayList<mixDTO> recomm_mix(String eventDay, String flowerMean) {
 		 try {
 	         conn();
-	              
-	         String sql = "select * from flower_mix";
+	         System.out.println(eventDay);
+	         System.out.println(flowerMean);
+	         String sql = "select * from mix";
 	         
 	         psmt =  conn.prepareStatement(sql);
-				
-				rs= psmt.executeQuery();
-				while(rs.next()) {
-					String mixflower = rs.getNString(1);
-					String mixment = rs.getNString(2);
-					String mixevent = rs.getNString(3);
-					String mixpurpose = rs.getNString(4);
-					String[] mean = mixpurpose.split("_");
-					String[] event = mixevent.split("_");
-					for (int i = 0; i < mean.length; i++) {
-						if (mean[i].equals(flowermean) && event[i].equals(eventday)){
-							mixDTO dto = new mixDTO(mixflower, mixment, mixevent, mixpurpose);
-							list.add(dto);
+	         rs = psmt.executeQuery();
+	         while(rs.next()) {
+	        	 String mixFlower = rs.getString(1);
+	        	 String mixMent = rs.getNString(2);
+	        	 String mixEvent = rs.getNString(3);
+	        	 String mixPurpose = rs.getNString(4);
+	        	 String[] mean = mixPurpose.split("_");
+	        	 System.out.println(mean.length);
+	        	 String[] event = mixEvent.split("_");
+	        	 	if (eventDay.equals("미선택")) {
+	        	 		for (int i = 0; i < mean.length; i++) {
+							if (mean[i].equals(flowerMean)){
+								mixDTO dto = new mixDTO(mixFlower, mixMent, mixEvent, mixPurpose);
+								list.add(dto);
+							}
+						}
+					}else if (flowerMean.equals("미선택")) {
+						for (int i = 0; i < event.length; i++) {
+							if (event[i].equals(eventDay)){
+								mixDTO dto = new mixDTO(mixFlower, mixMent, mixEvent, mixPurpose);
+								list.add(dto);
+							}
+						}
+					}else {
+						for (int i = 0; i < mean.length; i++) {
+							if (mean[i].equals(flowerMean) && event[i].equals(eventDay)){
+								mixDTO dto = new mixDTO(mixFlower, mixMent, mixEvent, mixPurpose);
+								list.add(dto);
+							}
 						}
 					}
-				}
+	        	 }
+	        	 	
+				
 	             
 	      } catch (Exception e) {
 	         e.printStackTrace();
