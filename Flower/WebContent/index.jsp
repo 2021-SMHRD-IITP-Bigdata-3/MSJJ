@@ -67,7 +67,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7">
-					<p>오늘의 그대에게 ..  <i>sem ut viverra</i> ullamcorper, neque ligula laoreet justo, non semper nunc mauris mattis lorem. </p>
+					<p>오늘의 그대에게 ..  <i>한번쯤 다시 만나고 싶은 사람을 간직하고 있다는 것은 거의 안부가 궁금해서도 그를 만나 다시 시작하고 싶어서도 아니다<br> 저절로 음악이 되고 시가되어 나의 삶을 채워준 그에게 사랑을 눈뜨게 해준 그에게 감사하는 마음을 대신 하고 싶은 것이다.</i> </p>
 				</div>
 			</div>
 		</div>
