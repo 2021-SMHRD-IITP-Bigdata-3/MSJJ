@@ -38,8 +38,8 @@
 					<span class="bar2"></span>
 					<span class="bar3"></span>
 			  </div>
-				<a class="navbar-brand top" href="#">
-					<img src="img/logo.png" alt="">
+				<a href="index.jsp">
+					<img src="img/logo.png">
 				</a>
 
 			</div>
@@ -50,6 +50,7 @@
 			   <li><a href="Choiceflower.jsp">꽃추천</a></li>
 				<li><a href="Market2.jsp">상품</a></li>
 				<li><a href="Mypage.jsp">마이페이지</a></li>
+				<li><a href="ReviewBoard.jsp">Review</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
 			   <%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>

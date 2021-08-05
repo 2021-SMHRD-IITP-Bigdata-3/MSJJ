@@ -15,7 +15,7 @@ public class memberDTO {
 		this.name = name;
 	}
 	
-	public memberDTO( String name, String email, String pw, String tel) {
+	public memberDTO(String name, String email, String pw, String tel) {
 		super();
 		this.name = name;
 		this.email = email;
