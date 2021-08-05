@@ -140,8 +140,8 @@ margin-top: -400px;
 	<div class="urban_list_contents" style="width:100%; clear:both;">
 	<div class="rows navi_category" style="width:1000px; margin:0 auto">
 	<div style="width:650px; float:left;">
-		<span style="font-family:noto; font-size:25px; line-height:25px; line-height:25px; color:$333;padding-right:10px;">Bouquet</span>
-		<span style="font-family:noto_light; font-size:16px; color:#666">어반플라워의 꽃다발로 사랑하는 사람에게 진심을 전해보세요.</span>
+		<span style="font-family:noto; font-size:25px; line-height:25px; line-height:25px; color:$333;padding-right:10px;">꽃바구니</span>
+		<span style="font-family:noto_light; font-size:16px; color:#666">꽃바구니로 사랑하는 사람에게 진심을 전해보세요.</span>
 	</div>
 	<div style="width:350px; float:right; text-align:right">
 		<span style="font-family:noto; font-size:12px; line-height:25px; color:#999">
