@@ -55,6 +55,6 @@ board_store number(36), board_member varchar2(100), board_date date, board_score
 constraint board_boardnum_pk primary key(board_number)
 );
 
-
+select * from product
 
 

@@ -1,3 +1,6 @@
+<%@page import="com.moder.recommDAO"%>
+<%@page import="com.moder.productDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.moder.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,7 +14,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Nevada - Free HTML Bootstrap Template</title>
+    <title>꽃 추천 페이지</title>
 
     <!-- Css -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -23,9 +26,6 @@
 <body>
 <%
 	memberDTO info = (memberDTO)session.getAttribute("info");
-	
-	
-	
 %>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -45,7 +45,7 @@
 			<div class="collapse navbar-collapse" id="main-menu">
 			   <ul class="nav navbar-nav navbar-right">
 				<%if(info != null){ %>
-			   <li><a href="Choiceflower.jsp">꽃추천</a></li>
+			    <li><a href="Choiceflower.jsp">꽃추천</a></li>
 				<li><a href="Market2.jsp">상품</a></li>
 				<li><a href="Mypage.jsp">마이페이지</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
@@ -79,7 +79,7 @@
 <form align="center" action = "recommServiceCon" method = "post">
 	<h1 align = "center">기념일 또는 꽃말을 선택하세요.</h1>
 	<br><br>
-	<select name="eventDay">
+	<select style= "width:200px;height:50px" name="eventDay">
 		<option value="미선택">기념일</option>
 		<option value="발렌타인데이">발렌타인데이</option>
 		<option value="화이트데이">화이트데이</option>
@@ -92,7 +92,7 @@
 		<option value="미선택">미선택</option>
 		
 	</select>
-	<select name="flowerMean">
+	<select style="width:200px;height:50px" name="flowerMean">
 		<option value="미선택">꽃말</option>
 		<option value="당신의 앞날">당신의 앞날</option>
 		<option value="기적같은 사랑">기적같은 사랑</option>
@@ -127,39 +127,56 @@
 	</tr>
 	<tr>
 	<td>
-	<label><input type="radio" style="width:20px;height:20px;border:1px name="flowerType" value = "1"><img width = 50% height = 50% src= "./img/flower/a.jpg"></label>
+	<label><input type="radio" style="width:20px;height:20px;border:1px" name="flowerType" value = "1"><img width = 50% height = 50% src= "./img/flower/a.jpg"></label>
 	</td>
 	<td>
-	<label><input type="radio" style="width:20px;height:20px;border:1px name="flowerType" value = "2"><img width = 50% height = 50% src= "./img/flower/b.jpg"></label>
+	<label><input type="radio" style="width:20px;height:20px;border:1px" name="flowerType" value = "2"><img width = 50% height = 50% src= "./img/flower/b.jpg"></label>
 	</td>
 	</tr>
-	<td></td>
 	<tr>
 	<td text-align="center">바구니</td>
 	<td text-align="center">꽃상자</td>
 	</tr>
 	<tr>
 	<td>
-	<label><input type="radio" style="width:20px;height:20px;border:1px name="flowerType" value = "3"><img width = 50% height = 50% src= "./img/flower/c.jpg"></label>
+	<label><input type="radio" style="width:20px;height:20px;border:1px" name="flowerType" value = "3"><img width = 50% height = 50% src= "./img/flower/c.jpg"></label>
 	</td>
 	<td>
-	<label><input type="radio" style="width:20px;height:20px;border:1px name="flowerType" value = "4"><img width = 50% height = 50% src= "./img/flower/d.jpg"></label>
+	<label><input type="radio" style="width:20px;height:20px;border:1px" name="flowerType" value = "4"><img width = 50% height = 50% src= "./img/flower/d.jpg"></label>
 	</td>
 	</tr>
 	<tr>
+	<td colspan = "2" align = "center"><h1> 기념일, 꽃말, 포장을 고르시고 선택 버튼을 클릭해주세요.</h1></td>
+	</tr>
+	<tr>
 	<td colspan = "2" align = "center">
-	<input type = "submit" value = "선택">
+	<br>
+	<input style="width:100px;height:100px" type = "submit" value = "선택">
 	<td>
 	</tr>
 	</table>
 </form>
-	
+
+<% ArrayList<productDTO>productList = (ArrayList)session.getAttribute("list2");%>
+
+<%if(productList != null){
+	System.out.println(productList.size());
+	for(int i =0; i < productList.size(); i++){%>
+		<%= productList.get(i).getProduct_image()%>
+		<img src = "<%= productList.get(i).getProduct_image()%>">
+	<% }%>	
+<%} %>
+
+
+
+
+
+
 
 	<br>
 	
-	<a>
-		<img src="orderflower.jpg" width = "400px" height= "400px">
-	</a>
+	
+
 	<br>
 	
 	<span>매장,위치</span><button>매장리뷰</button>	<br>

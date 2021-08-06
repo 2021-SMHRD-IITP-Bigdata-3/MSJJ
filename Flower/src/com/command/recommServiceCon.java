@@ -30,8 +30,10 @@ public class recommServiceCon extends HttpServlet {
 		ArrayList<mixDTO> list = new ArrayList<mixDTO>();
 		recommDAO dao = new recommDAO();
 		list = dao.recomm_mix(eventDay, flowerMean);
+		
 		ArrayList<productDTO> list2 = new ArrayList<productDTO>();
 		list2 = dao.recomm_product(list);
+		System.out.println(list2);
 		
 		String moveURL = "";
 		if(list2 != null) {

@@ -69,7 +69,6 @@ public class recommDAO {
 	        	 String mixEvent = rs.getNString(3);
 	        	 String mixPurpose = rs.getNString(4);
 	        	 String[] mean = mixPurpose.split("_");
-	        	 System.out.println(mean.length);
 	        	 String[] event = mixEvent.split("_");
 	        	 	if (eventDay.equals("πÃº±≈√")) {
 	        	 		for (int i = 0; i < mean.length; i++) {
@@ -109,23 +108,31 @@ public class recommDAO {
 	public ArrayList<productDTO> recomm_product(ArrayList<mixDTO> list) {
 		try {
 			conn();
+			System.out.println(list.size());
+			for (int i = 0; i<list.size();i++) {
+				System.out.println(list.get(i).getMix_flower());	
+			}
+			
+			
 			for (int i = 0; i<list.size();i++) {
 				String sql = "select * from product where product_mix=?";
 				psmt = conn.prepareStatement(sql);
 				psmt.setString(1, list.get(i).getMix_flower());
 				rs= psmt.executeQuery();
 				
-				if(rs.next()) {
-					int num = Integer.parseInt(rs.getString(1));
-					String productMix = rs.getString(2);
-					String productName = rs.getString(3);
-					int productType = Integer.parseInt(rs.getString(4));
-					int productPrice = Integer.parseInt(rs.getString(5));
-					String productImage = rs.getString(6);
-					String productRecomm = rs.getString(7);
-					int productStore = Integer.parseInt(rs.getNString(8));
-					productDTO dto = new productDTO(num, productMix, productName, productType, productPrice, productImage, productRecomm, productStore);
-					list2.add(dto);
+				while(rs.next()) {
+					if (rs != null) {
+						int num = Integer.parseInt(rs.getString(1));
+						String productMix = rs.getString(2);
+						String productName = rs.getString(3);
+						int productType = Integer.parseInt(rs.getString(4));
+						int productPrice = Integer.parseInt(rs.getString(5));
+						String productImage = rs.getString(6);
+						String productRecomm = rs.getString(7);
+						int productStore = Integer.parseInt(rs.getNString(8));
+						productDTO dto = new productDTO(num, productMix, productName, productType, productPrice, productImage, productRecomm, productStore);
+						list2.add(dto);
+					}
 				}
 			}			
 			
@@ -137,35 +144,5 @@ public class recommDAO {
 		}return list2;
 	}
 	
-	public ArrayList<flowerDTO> one_flower(String eventDay, String flowerMean) {
-		try {
-			conn();
-			for (int i = 0; i<list.size();i++) {
-				String sql = "select * from product where product_mix=?";
-				psmt = conn.prepareStatement(sql);
-				psmt.setString(1, list.get(i).getMix_flower());
-				rs= psmt.executeQuery();
-				
-				if(rs.next()) {
-					int num = Integer.parseInt(rs.getString(1));
-					String productMix = rs.getString(2);
-					String productName = rs.getString(3);
-					int productType = Integer.parseInt(rs.getString(4));
-					int productPrice = Integer.parseInt(rs.getString(5));
-					String productImage = rs.getString(6);
-					String productRecomm = rs.getString(7);
-					int productStore = Integer.parseInt(rs.getNString(8));
-					productDTO dto = new productDTO(num, productMix, productName, productType, productPrice, productImage, productRecomm, productStore);
-					list2.add(dto);
-				}
-			}			
-			
-			
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}finally {
-			close();
-		}return list2;
-	}
 	
 }
