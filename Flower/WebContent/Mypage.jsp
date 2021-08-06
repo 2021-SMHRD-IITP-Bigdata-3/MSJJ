@@ -15,7 +15,7 @@
 
     <!-- Css -->
     <link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/OrderStyle.css" rel="stylesheet">
+   <link href="css/OrderStyle.css" rel="stylesheet">
 
 <style>
 .rows_indi_item:after{
@@ -50,55 +50,56 @@ margin-top: -400px;
 
 <body>
 <%
-	memberDTO info = (memberDTO)session.getAttribute("info");
-	
-	
-	
+   memberDTO info = (memberDTO)session.getAttribute("info");
+   
+   
+   
 %>
 
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<div class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">	
-					<span class="bar1"></span>
-					<span class="bar2"></span>
-					<span class="bar3"></span>
-			  </div class="navbar-brand top">
-				<a  href="index.jsp">
-					<img src="img/logo.png">
-				</a>
+   <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+         <div class="navbar-header">
+            <div class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">   
+               <span class="bar1"></span>
+               <span class="bar2"></span>
+               <span class="bar3"></span>
+           </div class="navbar-brand top">
+            <a  href="index.jsp">
+               <img src="img/logo.png">
+            </a>
 
-			</div>
+         </div>
 
-			<div class="collapse navbar-collapse" id="main-menu">
+         <div class="collapse navbar-collapse" id="main-menu">
 			   <ul class="nav navbar-nav navbar-right">
 			   <%if(info != null){ %>
 			   <li><a href="Choiceflower.jsp">꽃추천</a></li>
 				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="Mypage.jsp">마이페이지</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
-				<li><a href="ReviewBoard.jsp">리뷰</li>
+				<li><a href="ReviewBoard.jsp">리뷰 </a></li>
 			   <%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
 				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
 				<li><a href="ReviewBoard.jsp">리뷰</a></li>
+				
 				<%} %>
-			  </ul>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container-fluid -->
-	</nav>
+           </ul>
+         </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+   </nav>
   
 
 
 
     <!-- Intro -->
-	
-	
-	
+   
+   
+   
 <div class="rows navi_category" style="width:1000px; margin:0 auto; ">
-    	<div style="width:650px; float:left; text-align:left; "><span style="font-family:noto; font-size:25px; line-height:25px; color:#333 ;padding-right:10px;">마이페이지</span> <span style="font-family:noto_light; font-size:16px; color:#666">꽃으로 사랑하는 사람에게 진심을 전해보세요.</span>
+       <div style="width:650px; float:left; text-align:left; "><span style="font-family:noto; font-size:25px; line-height:25px; color:#333 ;padding-right:10px;">마이페이지</span> <span style="font-family:noto_light; font-size:16px; color:#666">꽃으로 사랑하는 사람에게 진심을 전해보세요.</span>
         </div>
         <div style="width:350px; float:right;  text-align:right">
             <span style="font-family:noto; font-size:12px; line-height:25px; color:#999;  "><img src="/urbanflower/images/icon_home.gif" width="10" height="10"> <span style="padding:0 10px 0 10px;">&gt;</span>CUSTOMER<span style="padding:0 10px 0 10px;">&gt;</span>마이페이지
@@ -106,85 +107,85 @@ margin-top: -400px;
     </div>
     <!-- 마이페이지 css부분 -->
     
-		
-	<div class="indiv"><!-- Start indiv -->
+      
+   <div class="indiv"><!-- Start indiv -->
 
 
 <style type="text/css">
 button.btn {
-	border: none;
-	font-size: 0;
-	cursor: pointer;
+   border: none;
+   font-size: 0;
+   cursor: pointer;
 }
 div.sns-connect-status-title {
-	margin-top: 15px;
-	background: url("/shop/data/skin/standard/img/meminfor_sns_01.gif") no-repeat;
-	width: 82px;
-	height: 23px;
-	font-size: 0;
+   margin-top: 15px;
+   background: url("/shop/data/skin/standard/img/meminfor_sns_01.gif") no-repeat;
+   width: 82px;
+   height: 23px;
+   font-size: 0;
 }
 div.outer-border {
-	border: 1px solid #dedede;
+   border: 1px solid #dedede;
 }
 .inner-border {
-	border: 5px solid #f3f3f3;
-	padding: 10px;
+   border: 5px solid #f3f3f3;
+   padding: 10px;
 }
 div.sns-connect-status {
-	overflow: hidden;
+   overflow: hidden;
 }
 div.sns-profile-image {
-	float: left;
+   float: left;
 }
 div.sns-profile-image img {
-	vertical-align: top;
+   vertical-align: top;
 }
 div.sns-connect-controll {
-	float: left;
-	margin-left: 10px;
+   float: left;
+   margin-left: 10px;
 }
 div.connected-sns img {
-	vertical-align: middle;
+   vertical-align: middle;
 }
 div.connected-sns span.connect-status {
-	font: 11px dotum;
-	color: #666666;
-	margin-left: 6px;
+   font: 11px dotum;
+   color: #666666;
+   margin-left: 6px;
 }
 div.connected-sns button.btn-facebook-disconnect {
-	background: url('/shop/data/skin/standard/img/meminfo_btn_sns_clear_facebook.png') no-repeat;
-	width: 200px;
-	height: 26px;
-	vertical-align: middle;
+   background: url('/shop/data/skin/standard/img/meminfo_btn_sns_clear_facebook.png') no-repeat;
+   width: 200px;
+   height: 26px;
+   vertical-align: middle;
 }
 div.connected-sns button.btn-payco-disconnect {
-	background: url('/shop/data/skin/standard/img/meminfo_btn_sns_clear_payco.png') no-repeat;
-	width: 200px;
-	height: 26px;
-	vertical-align: middle;
+   background: url('/shop/data/skin/standard/img/meminfo_btn_sns_clear_payco.png') no-repeat;
+   width: 200px;
+   height: 26px;
+   vertical-align: middle;
 }
 div.connected-sns {
-	display:inline;
+   display:inline;
 }
 div.connected-sns button.btn-facebook-connect {
-	background: url('/shop/data/skin/standard/img/login_sns_facebook_wide.png') no-repeat;
-	width: 250px;
-	height: 45px;
-	background-size: cover;
-	vertical-align: middle;
+   background: url('/shop/data/skin/standard/img/login_sns_facebook_wide.png') no-repeat;
+   width: 250px;
+   height: 45px;
+   background-size: cover;
+   vertical-align: middle;
 }
 div.connected-sns button.btn-payco-connect {
-	background: url('/shop/data/skin/standard/img/meminfo_sns_payco.png') no-repeat;
-	width: 200px;
-	height: 26px;
-	vertical-align: middle;
+   background: url('/shop/data/skin/standard/img/meminfo_sns_payco.png') no-repeat;
+   width: 200px;
+   height: 26px;
+   vertical-align: middle;
 }
 #sns-txt-FACEBOOK {color:#3b579d; font-weight:bold;}
 #sns-txt-PAYCO {color:#fa1414; font-weight:bold;}
 .sns-info {margin-top:2px; color:#959595;font-size:13px;}
 </style>
 
-	
+   
 
 
 
@@ -240,7 +241,7 @@ font-family:'noto_light';
 color:#5D5D5D;
 letter-spacing:-1;
 }
-.scroll	{
+.scroll   {
 scrollbar-face-color: #FFFFFF;
 scrollbar-shadow-color: #AFAFAF;
 scrollbar-highlight-color: #AFAFAF;
@@ -285,40 +286,40 @@ scrollbar-arrow-color: #838383;
 
 <table width="50%" cellpadding="5" cellspacing="0" border="0">
 <tbody><tr style="height:50px;">
-	<td class="memberCols1"><font color="FF6000">*</font> 아이디</td>
-	<td class="memberCols2">
-	<span class="eng"><b>회원아이디</b></span>
-	</td>
+   <td class="memberCols1"><font color="FF6000">*</font> 아이디</td>
+   <td class="memberCols2">
+   <span class="eng"><b>회원아이디</b></span>
+   </td>
 </tr>
 <tr><td colspan="2" height="1" bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
 <tr style="height:50px;">
-	<td class="memberCols1"><font color="FF6000">*</font> 비밀번호</td>
-	<!-- 비밀번호 버튼 -->
-	<td class="memberCols2">
-		<input type="password" name="pw" placeholder="PW를 입력하세요" style="width: 200px; margin: 0 auto; background-color:white; color:gray;">
-		
-		
-	</td>
+   <td class="memberCols1"><font color="FF6000">*</font> 비밀번호</td>
+   <!-- 비밀번호 버튼 -->
+   <td class="memberCols2">
+      <input type="password" name="pw" placeholder="PW를 입력하세요" style="width: 200px; margin: 0 auto; background-color:white; color:gray;">
+      
+      
+   </td>
 </tr>
 
 
 <tr><td colspan="2" height="1" bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
 <tr style="height:50px;">
-	<td class="memberCols1"><font color="FF6000">*</font> 이름</td>
-	<td class="memberCols2">
-	<input type="text" style="width:200px;" name="name" placeholder="이름을 입력하세요" required="" fld_esssential="" label="이름">
-	</td>
+   <td class="memberCols1"><font color="FF6000">*</font> 이름</td>
+   <td class="memberCols2">
+   <input type="text" style="width:200px;" name="name" placeholder="이름을 입력하세요" required="" fld_esssential="" label="이름">
+   </td>
 </tr>
 
 <tr><td colspan="2" height="1" bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
 
 <tr style="height:70px;">
-	<td class="memberCols1"><font color="FF6000">*</font> 핸드폰</td>
-	<td class="memberCols2">
-	<input type="text" name="mobile[]" id="mobile0" style="width:200px;" placeholder="번호를 입력하세요" size="4" maxlength="4" required="" option="regNum" label="핸드폰">
-	
-	
-	</td>
+   <td class="memberCols1"><font color="FF6000">*</font> 핸드폰</td>
+   <td class="memberCols2">
+   <input type="text" name="mobile[]" id="mobile0" style="width:200px;" placeholder="번호를 입력하세요" size="4" maxlength="4" required="" option="regNum" label="핸드폰">
+   
+   
+   </td>
 </tr>
 <tr><td colspan="2" height="1" bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
 
@@ -363,75 +364,75 @@ scrollbar-arrow-color: #838383;
 <iframe id="ifrmHpauth" name="ifrmHpauth" style="width:300px;height:200px;display:none;"></iframe>
 
 
-	
-	
-	<!-- Gallery -->
-	
-		
-				
-				
-				
-				
-		
-	
-	<!-- End Gallery -->
+   
+   
+   <!-- Gallery -->
+   
+      
+            
+            
+            
+            
+      
+   
+   <!-- End Gallery -->
 
-	
-	
-			  
-			  
-			  <a class="left carousel-control" href="#mybox" role="button" data-slide="prev">
-				<span class="glyphicon glyphicon-chevron-left"></span>
-			  </a>
-			  <a class="right carousel-control" href="#mybox" role="button" data-slide="next">
-				<span class="glyphicon glyphicon-chevron-right"></span>
-			  </a>
-			  
-			</div><!-- /.modal-body -->
-		  </div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	  </div><!-- /.modal -->
-	</div><!-- /.container -->
-	
-	
-	
-	
-	
-	<!-- Press -->
-	
-	
-	
-	<!-- Brand -->
-	<section id="brand">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-				   <ul class="logo-list list-inline text-center">
-					
-				  </ul>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	
-	<!-- Copyright -->
-	<footer>
-		<div class="container">
-			<p class="text-center">Â© 2016 - Designed by <a href="http://www.nicolatolin.com">Nicola Tolin</a></p>
-		</div>
-	</footer>
-	
-	<a href="#page-top" class="cd-top">Top</a>
-	
+   
+   
+           
+           
+           <a class="left carousel-control" href="#mybox" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+           </a>
+           <a class="right carousel-control" href="#mybox" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+           </a>
+           
+         </div><!-- /.modal-body -->
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+     </div><!-- /.modal -->
+   </div><!-- /.container -->
+   
+   
+   
+   
+   
+   <!-- Press -->
+   
+   
+   
+   <!-- Brand -->
+   <section id="brand">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <ul class="logo-list list-inline text-center">
+               
+              </ul>
+            </div>
+         </div>
+      </div>
+   </section>
+   
+   
+   <!-- Copyright -->
+   <footer>
+      <div class="container">
+         <p class="text-center">Â© 2016 - Designed by <a href="http://www.nicolatolin.com">Nicola Tolin</a></p>
+      </div>
+   </footer>
+   
+   <a href="#page-top" class="cd-top">Top</a>
+   
 
     <!-- script -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/modernizr.js"></script>
-	<script src="js/script.js"></script>
-	
-	
+   <script src="js/modernizr.js"></script>
+   <script src="js/script.js"></script>
+   
+   
 
 </body>
 </html>

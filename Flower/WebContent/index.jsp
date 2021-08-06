@@ -46,7 +46,7 @@
 				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="Mypage.jsp">마이페이지</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
-				<li><a href="ReviewBoard.jsp">리뷰</li>
+				<li><a href="ReviewBoard.jsp">리뷰 </a></li>
 			   <%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
 				<li><a href="Market.jsp">상품</a></li>
