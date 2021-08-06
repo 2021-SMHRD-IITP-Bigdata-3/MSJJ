@@ -23,8 +23,6 @@
 <%
 	memberDTO info = (memberDTO)session.getAttribute("info");
 	
-	
-	
 %>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
