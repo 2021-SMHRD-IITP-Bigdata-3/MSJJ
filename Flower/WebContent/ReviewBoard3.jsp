@@ -146,7 +146,7 @@ margin-top: -400px;
 <a href="#">게시글 제목</a>
   
 </td>
-<td class="name">작성자</td>
+<td class="name">아이디</td>
 <td class="date">2008/02/14</td>
 <td class="hit">5</td>
 </tr><tr>
