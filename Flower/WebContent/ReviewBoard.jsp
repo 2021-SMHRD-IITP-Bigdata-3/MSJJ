@@ -22,10 +22,7 @@
 
 <body>
 <%
-	memberDTO info = (memberDTO)session.getAttribute("info");
-	
-	
-	
+	memberDTO info = (memberDTO)session.getAttribute("info");	
 %>
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
