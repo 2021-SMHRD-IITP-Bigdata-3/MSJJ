@@ -6,7 +6,7 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
+  font-family: ±¼¸²;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -58,7 +58,7 @@ strong {
   font-weight: bold;
 }
 dfn {
-  font-style: italic;
+  
 }
 h1 {
   margin: .67em 0;
@@ -106,7 +106,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  
   font-size: 1em;
 }
 button,
@@ -262,7 +262,7 @@ th {
   }
 }
 @font-face {
-  font-family: 'Glyphicons Halflings';
+ 
 
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
@@ -271,8 +271,8 @@ th {
   position: relative;
   top: 1px;
   display: inline-block;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
+ 
+
   font-weight: normal;
   line-height: 1;
 
@@ -1083,7 +1083,7 @@ html {
   -webkit-tap-highlight-or: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;

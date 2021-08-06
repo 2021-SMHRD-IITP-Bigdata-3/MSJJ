@@ -22,14 +22,14 @@ public class recommServiceCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		
-		String eventday = request.getParameter("eventday");
-		String flowermean = request.getParameter("flowermean");
-		System.out.println(eventday);
-		System.out.println(flowermean);
+		String eventDay = request.getParameter("eventDay");
+		String flowerMean = request.getParameter("flowerMean");
+		System.out.println(eventDay);
+		System.out.println(flowerMean);
 		
 		ArrayList<mixDTO> list = new ArrayList<mixDTO>();
 		recommDAO dao = new recommDAO();
-		list = dao.recomm_mix(eventday, flowermean);
+		list = dao.recomm_mix(eventDay, flowerMean);
 		ArrayList<productDTO> list2 = new ArrayList<productDTO>();
 		list2 = dao.recomm_product(list);
 		
