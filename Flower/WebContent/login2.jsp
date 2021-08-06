@@ -126,7 +126,7 @@ margin-top: -400px;
 					<td width="80" class="input_txt" style="font-size:15px;">아이디</td>
 					<td><input type="text" name="m_id" size="20" tabindex="1" style="width:215px;padding:5px;"></td>
 					
-					<td rowspan="2" class="noline"><input type="submit" value="login" tabindex="3" style="width:85px; height: 90px; background-color:black; color:white;"></td>
+					<td rowspan="2" class="noline"><input type="submit" value="login" tabindex="3" style="width:85px; height: 90px;  color:white; background-color:black;"></td>
 				</tr>
 				
 				<tr>
