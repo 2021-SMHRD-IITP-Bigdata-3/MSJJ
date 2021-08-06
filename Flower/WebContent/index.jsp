@@ -65,7 +65,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-7">
-					<p>오늘의 그대에게 ..  <i>sem ut viverra</i> ullamcorper, neque ligula laoreet justo, non semper nunc mauris mattis lorem. </p>
+					<p>오늘의 그대에게 ..  <i>한번쯤 다시 만나고 싶은 사람을 간직하고 있다는 것은 거의 안부가 궁금해서도 그를 만나 다시 시작하고 싶어서도 아니다<br> 저절로 음악이 되고 시가되어 나의 삶을 채워준 그에게 사랑을 눈뜨게 해준 그에게 감사하는 마음을 대신 하고 싶은 것이다.</i> </p>
 				</div>
 			</div>
 		</div>
@@ -87,7 +87,7 @@
 		<div class="container">
 			<div class="row">
 			
-			
+			<h1>오늘의 추천 상품</h1>
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-1"></div>
@@ -155,20 +155,16 @@
 			<div class="row">
 				<div class="col-md-6 big-letter">
 					<p>
-						꽃 추천페이지 버튼 
+						
 					</p>
 					<br>
 					<p>
-						Vestibulum tempor velit nibh, nec finibus lectus ultrices sodales. Aliquam pellentesque nisl et maximus egestas. Vivamus accumsan, sem ut viverra
-						ullamcorper, neque ligula laoreet justo, non semper nunc mauris mattis lorem. Maecenas finibus non ipsum ullamcorper vehicula.
+						
 					</p>
 				</div>
 				<div class="col-md-6">
 					<p>
-						Aliquam pellentesque nisl et maximus egestas. Vivamus accumsan, sem ut viverra ullamcorper, neque ligula laoreet justo, 
-						non semper nunc mauris mattis lorem. Quisque maximus vel nibh non tincidunt. Mauris felis felis, porta 
-						vitae sem sed, auctor consequat diam. Sed eu magna ultricies, convallis elit vel, lacinia ante. Vestibulum tempor velit 
-						nibh, nec finibus lectus ultrices sodales
+						
 					</p>
 					<br>
 
@@ -179,7 +175,7 @@
 	<section id="portfolio">
 		<div class="container">
 			<div class="row">
-			
+			<h1>한송이 바구니 다발 상자</h1>
 			
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
