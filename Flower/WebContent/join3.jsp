@@ -92,48 +92,11 @@ margin-top: -400px;
 
 
     <!-- Intro -->
-	<section class="intro">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7">
-					<p>오늘의 그대에게 ..   <i>sem ut viverra</i> ullamcorper, neque ligula laoreet justo, non semper nunc mauris mattis lorem. </p>
-				</div>
-			</div>
-		</div>
-	</section>
+	
 
 	
 	<!-- Slider -->
-	<section class="slider">
-		<div class="container-fluid">
-			<div class="row no-gutter">
-				<div class="col-lg-12">
-					<div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner" role="listbox">
-						<div class="item active">
-						  <img src="img/slide-1.jpg" alt="slide">
-						</div>
-
-						<div class="item">
-						  <img src="img/slide-2.jpg" alt="slide">
-						</div>
-
-						<div class="item">
-						  <img src="img/slide-3.jpg" alt="slide">
-						</div>
-
-						<div class="item">
-						  <img src="img/slide-4.jpg" alt="slide">
-						</div>
-					  </div>
-					  
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	
 	
 	
 	
@@ -149,7 +112,6 @@ margin-top: -400px;
         <br>
 	<form id="form" name="frmMember" method="post" action="/shop/member/indb.php" onsubmit="return chkForm2(this)">
 
-<!-- 네이버체크아웃(회원연동) -->
 
 
 <div style="text-align: right;margin-bottom: 10px;font-size:12px;"><font color="FF6000">* </font><font class="small"><b>필수입력사항</b></font></div>
