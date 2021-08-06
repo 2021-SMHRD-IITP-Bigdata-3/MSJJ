@@ -7,7 +7,7 @@ body {
     margin: 0;
     height: 100%;
     background: white;
-    font-family: Dotum,'µ¸¿ò',Helvetica,sans-serif;
+    font-family: '±¼¸²';
 }
 #logo {
     width: 240px;
@@ -67,7 +67,7 @@ h3 {
 }
 
 input {
-    font-family: Dotum,'µ¸¿ò',Helvetica,sans-serif;    
+    font-family: '±¼¸²';    
 }
 
 .box.int_id {
@@ -139,7 +139,7 @@ select {
     text-align: start;
     border: none;
     cursor: default;
-    font-family: Dotum,'µ¸¿ò',Helvetica,sans-serif;
+    font-family: '±¼¸²';
 }
 
 /* ¿¡·¯¸Þ¼¼Áö */
@@ -175,5 +175,5 @@ select {
     background-color: #08a600;
     font-size: 20px;
     font-weight: 400;
-    font-family: Dotum,'µ¸¿ò',Helvetica,sans-serif;
+    font-family: '±¼¸²';
 }
