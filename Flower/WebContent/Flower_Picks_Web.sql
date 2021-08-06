@@ -72,6 +72,9 @@ constraint board_memberemail_fk foreign key(board_member)
 
 insert into flower_member values('test','test','test','test');
 
-select * from flower_member
+select * from product
+select * from mix
+
+
 
 

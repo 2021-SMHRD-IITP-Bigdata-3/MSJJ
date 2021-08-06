@@ -76,62 +76,85 @@
 
 	
 	<!-- Slider -->
-	
-	<select name="">
-		<option value="">선물목적</option>
-		<option value="">선물목적1</option>
-		<option value="">선물목적2</option>
-		<option value="">선물목적3</option>
-	</select>
-	
+<form align="center" action = "recommServiceCon" method = "post">
+	<h1 align = "center">기념일 또는 꽃말을 선택하세요.</h1>
+	<br><br>
+	<select name="eventDay">
+		<option value="미선택">기념일</option>
+		<option value="발렌타인데이">발렌타인데이</option>
+		<option value="화이트데이">화이트데이</option>
+		<option value="로즈데이">로즈데이</option>
+		<option value="성년의 날">성년의 날</option>
+		<option value="어버이날">어버이 날</option>
+		<option value="스승의날">스승의 날</option>
+		<option value="결혼기념일<">결혼기념일</option>
+		<option value="졸업식">졸업식</option>
+		<option value="미선택">미선택</option>
 		
+	</select>
+	<select name="flowerMean">
+		<option value="미선택">꽃말</option>
+		<option value="당신의 앞날">당신의 앞날</option>
+		<option value="기적같은 사랑">기적같은 사랑</option>
+		<option value="사랑의 성공">사랑의 성공</option>
+		<option value="순수한 사랑">순수한 사랑</option>
+		<option value="신비로운 사랑">신비로운 사랑</option>
+		<option value="열렬한 사랑">열렬한 사랑</option>
+		<option value="영훤한 사랑">영원한 사랑</option>
+		<option value="최고의 사랑">최고의 사랑</option>
+		<option value="행복한 사랑">행복한 사랑</option>
+		<option value="첫사랑의 고백">첫사랑의 고백</option>
+		<option value="진심">진심</option>
+		<option value="우정">우정</option>
+		<option value="존경">존경</option>
+		<option value="감사">감사</option>
+		<option value="성공">성공</option>
+		<option value="미선택">미선택</option>
+	</select>
+<br><br>
 
 	
 	
 	<!-- About 주문상품 그림& 설명-->
 	
-	<section class="about" id="about">
-		<div class="container about">
-			<div class="row">
-				<div class="col-md-6 big-letter">
-				<!-- 반복문으로 구매상품 출력 -->
-				
-					<a>
-						<img src="orderflower.jpg" width = "400px" height= "400px">
-					</a>
-				
-
-
-					
-					
-					
-				</div>
-				<div class="col-md-6">
-					<p style="text-align: right;">
-					
-					
-					
-					
-					
-					</p>
-					<br>
-					
-				</div>
-			</div>
-		</div>
-	</section>
-	
-<input type="text"> <button>+</button><button>-</button> <br>
-	
-	
 	<!-- Gallery -->
-	<h1>포장고르기</h1>
+	<h1 align = "center">포장을 고르세요.</h1>
+	<br><br>
+	<table align="center">
+	<tr>
+	<td text-align="center">한송이</td>
+	<td text-align="center">꽃다발</td>
+	</tr>
+	<tr>
+	<td>
+	<label><input type="radio" style="width:20px;height:20px;border:1px name="flowerType" value = "1"><img width = 50% height = 50% src= "./img/flower/a.jpg"></label>
+	</td>
+	<td>
+	<label><input type="radio" style="width:20px;height:20px;border:1px name="flowerType" value = "2"><img width = 50% height = 50% src= "./img/flower/b.jpg"></label>
+	</td>
+	</tr>
+	<td></td>
+	<tr>
+	<td text-align="center">바구니</td>
+	<td text-align="center">꽃상자</td>
+	</tr>
+	<tr>
+	<td>
+	<label><input type="radio" style="width:20px;height:20px;border:1px name="flowerType" value = "3"><img width = 50% height = 50% src= "./img/flower/c.jpg"></label>
+	</td>
+	<td>
+	<label><input type="radio" style="width:20px;height:20px;border:1px name="flowerType" value = "4"><img width = 50% height = 50% src= "./img/flower/d.jpg"></label>
+	</td>
+	</tr>
+	<tr>
+	<td colspan = "2" align = "center">
+	<input type = "submit" value = "선택">
+	<td>
+	</tr>
+	</table>
+</form>
 	
-	
-	<label><input type="radio" name="s"><img src= "pojangji.png"></label>
-	<label><input type="radio" name="s"><img src= "pojangji.png"></label>
-	<label><input type="radio" name="s"><img src= "pojangji.png"></label>
-	<label><input type="radio" name="s"><img src= "pojangji.png"></label>
+
 	<br>
 	
 	<a>

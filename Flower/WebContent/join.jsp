@@ -12,7 +12,7 @@
 	<body>
         <!-- header -->
         <div id="header">
-            <a href="index.jsp" target="_blank" title="네이버 회원가입 페이지 보러가기"><img src="img/logo.png" id="logo"></a>
+            <a href="index.jsp" target="_blank" title="회원가입"><img src="img/logo.png" id="logo"></a>
         </div>
 
 
