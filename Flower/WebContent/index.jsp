@@ -89,7 +89,7 @@
 		<div class="container">
 			<div class="row">
 			
-			
+			<h1>오늘의 추천 상품</h1>
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-1"></div>
@@ -157,20 +157,16 @@
 			<div class="row">
 				<div class="col-md-6 big-letter">
 					<p>
-						꽃 추천페이지 버튼 
+						
 					</p>
 					<br>
 					<p>
-						Vestibulum tempor velit nibh, nec finibus lectus ultrices sodales. Aliquam pellentesque nisl et maximus egestas. Vivamus accumsan, sem ut viverra
-						ullamcorper, neque ligula laoreet justo, non semper nunc mauris mattis lorem. Maecenas finibus non ipsum ullamcorper vehicula.
+						
 					</p>
 				</div>
 				<div class="col-md-6">
 					<p>
-						Aliquam pellentesque nisl et maximus egestas. Vivamus accumsan, sem ut viverra ullamcorper, neque ligula laoreet justo, 
-						non semper nunc mauris mattis lorem. Quisque maximus vel nibh non tincidunt. Mauris felis felis, porta 
-						vitae sem sed, auctor consequat diam. Sed eu magna ultricies, convallis elit vel, lacinia ante. Vestibulum tempor velit 
-						nibh, nec finibus lectus ultrices sodales
+						
 					</p>
 					<br>
 
@@ -181,7 +177,7 @@
 	<section id="portfolio">
 		<div class="container">
 			<div class="row">
-			
+			<h1>한송이 바구니 다발 상자</h1>
 			
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
