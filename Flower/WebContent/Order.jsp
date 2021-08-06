@@ -34,79 +34,37 @@
 					<span class="bar1"></span>
 					<span class="bar2"></span>
 					<span class="bar3"></span>
-			  
-			  <div>
-				<a class="navbar-brand top" href="index.jsp">
-					<img src="img/logo.png" alt="">
+			  </div>
+				<a class="navbar-brand top" href="#">
+					<img src="img/logo.png"alt="">
 				</a>
 
 			</div>
 
 			<div class="collapse navbar-collapse" id="main-menu">
 			   <ul class="nav navbar-nav navbar-right">
-				<%if(info != null){ %>
+			   <%if(info != null){ %>
 			   <li><a href="Choiceflower.jsp">꽃추천</a></li>
-				<li><a href="Market2.jsp">상품</a></li>
+				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="Mypage.jsp">마이페이지</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
+				<li><a href="ReviewBoard.jsp">리뷰 </a></li>
 			   <%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
-				<li><a href="Market2.jsp">상품</a></li>
+				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
+				<li><a href="ReviewBoard.jsp">리뷰</a></li>
+				
 				<%} %>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
-		</nav>
-  
+	</nav>
 
 
 
     <!-- Intro -->
-	<section class="intro">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7">
-					<p>오늘의 그대에게 ..  <i>sem ut viverra</i> ullamcorper, neque ligula laoreet justo, non semper nunc mauris mattis lorem. </p>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	
-	<!-- Slider -->
-	<section class="slider">
-		<div class="container-fluid">
-			<div class="row no-gutter">
-				<div class="col-lg-12">
-					<div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner" role="listbox">
-						<div class="item active">
-						  <img src="img/slide-1.jpg" alt="slide">
-						</div>
-
-						<div class="item">
-						  <img src="img/slide-2.jpg" alt="slide">
-						</div>
-
-						<div class="item">
-						  <img src="img/slide-3.jpg" alt="slide">
-						</div>
-
-						<div class="item">
-						  <img src="img/slide-4.jpg" alt="slide">
-						</div>
-					  </div>
-					  
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	
 	
 	<!-- About 주문상품 그림& 설명-->
 	

@@ -44,16 +44,19 @@
 
 			<div class="collapse navbar-collapse" id="main-menu">
 			   <ul class="nav navbar-nav navbar-right">
-				<%if(info != null){ %>
+			   <%if(info != null){ %>
 			   <li><a href="Choiceflower.jsp">꽃추천</a></li>
-				<li><a href="Market2.jsp">상품</a></li>
+				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="Mypage.jsp">마이페이지</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
+				<li><a href="ReviewBoard.jsp">리뷰 </a></li>
 			   <%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
-				<li><a href="Market2.jsp">상품</a></li>
+				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
+				<li><a href="ReviewBoard.jsp">리뷰</a></li>
+				
 				<%} %>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
@@ -64,15 +67,7 @@
 
 
     <!-- Intro -->
-	<section class="intro">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7">
-					<p>오늘의 그대에게 ..  <i>sem ut viverra</i> ullamcorper, neque ligula laoreet justo, non semper nunc mauris mattis lorem. </p>
-				</div>
-			</div>
-		</div>
-	</section>
+	<
 
 	
 	<!-- Slider -->
@@ -157,19 +152,7 @@
 
 	<br>
 	
-	<a>
-		<img src="orderflower.jpg" width = "400px" height= "400px">
-	</a>
-	<br>
 	
-	<span>매장,위치</span><button>매장리뷰</button>	<br>
-	<span>매장,위치</span><button>매장리뷰</button>	<br>
-	<span>매장,위치</span><button>매장리뷰</button>	<br>
-	<!-- for문으로 더보기 -->
-	<p>꽃말 123131231231231</p>	
-		
-		<a href="Order.html"><button>주문하기</button>	</a>	
-				
 				
 				
 		

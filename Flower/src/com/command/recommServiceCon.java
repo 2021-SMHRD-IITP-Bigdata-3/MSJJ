@@ -38,10 +38,10 @@ public class recommServiceCon extends HttpServlet {
 			System.out.println("성공");
 			HttpSession session = request.getSession();
 			session.setAttribute("list2", list2);
-			moveURL = "Choiceflower.jsp";
+			moveURL = "Order.jsp";
 		}else{
 			System.out.println("실패");
-			moveURL = "Choiceflower.jsp";
+			moveURL = "Order.jsp";
 		}
 		
 		

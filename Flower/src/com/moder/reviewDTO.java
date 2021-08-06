@@ -9,5 +9,4 @@ public class reviewDTO {
 	private String borad_member;
 	private String borad_date;
 	
-	
 }
