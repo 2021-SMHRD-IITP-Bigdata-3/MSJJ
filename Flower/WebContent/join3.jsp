@@ -144,9 +144,9 @@ margin-top: -400px;
             <span style="font-family:noto; font-size:12px; line-height:25px; color:#999;  "><img src="/urbanflower/images/icon_home.gif" width="10" height="10"> <span style="padding:0 10px 0 10px;">&gt;</span>CUSTOMER<span style="padding:0 10px 0 10px;">&gt;</span>회원가입
         </span></div>
     </div>
-    <br>
-    <!-- 회원가입 --> 
-    
+
+    <!-- 회원가입 -->    
+        <br>
 	<form id="form" name="frmMember" method="post" action="/shop/member/indb.php" onsubmit="return chkForm2(this)">
 
 <!-- 네이버체크아웃(회원연동) -->
