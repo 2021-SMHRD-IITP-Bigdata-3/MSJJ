@@ -118,16 +118,18 @@
 
 			<div class="collapse navbar-collapse" id="main-menu">
 			   <ul class="nav navbar-nav navbar-right">
-				<%if(info != null){ %>
+			   <%if(info != null){ %>
 			   <li><a href="Choiceflower.jsp">꽃추천</a></li>
-				<li><a href="Market2.jsp">상품</a></li>
+				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="Mypage.jsp">마이페이지</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
+				<li><a href="ReviewBoard.jsp">리뷰</li>
 			   <%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
-				<li><a href="Market2.jsp">상품</a></li>
+				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
+				<li><a href="ReviewBoard.jsp">리뷰</a></li>
 				<%} %>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
@@ -143,6 +145,16 @@
         <h1>후기</h1>
         <form name="reviewform" class="reviewform" method="post" action="WriteBoardServiceCon">
             <input type="hidden" name="rate" id="rate" value="0"/>
+            <p>
+							<td>상품이름  :<% %></td>
+							<br>
+							상품가격  :<% %>
+							<br>
+							구매일자 :<% %>
+							<br>
+							매장       :<% %>
+							<br>
+						</p>
             <p class="title_star">별점과 리뷰를 남겨주세요.</p>
      
             <div class="review_rating">
@@ -164,7 +176,7 @@
             <div class="review_contents">
             <tr>
 						<td>작성자</td>
-						<td> : </td>
+						<td> : <% %></td>
 					</tr>
                 <div class="warning_msg">5자 이상으로 작성해 주세요.</div>
                 <textarea rows="10" class="review_textarea" name = "content"></textarea>

@@ -43,14 +43,17 @@
 			   <ul class="nav navbar-nav navbar-right">
 			   <%if(info != null){ %>
 			   <li><a href="Choiceflower.jsp">꽃추천</a></li>
-				<li><a href="Market2.jsp">상품</a></li>
+				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="Mypage.jsp">마이페이지</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
+				<li><a href="ReviewBoard.jsp">리뷰</li>
 			   <%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
-				<li><a href="Market2.jsp">상품</a></li>
+				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
+				<li><a href="ReviewBoard.jsp">리뷰</a></li>
+				
 				<%} %>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
@@ -91,7 +94,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-1"></div>
-							<a href="Market2.jsp">
+							<a href="Market.jsp">
 								<div class="overlay">
 									<h2>꽃을 보니 니가 생각나서..</h2>
 									<p>꽃한송이</p> 
@@ -104,7 +107,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-2"></div>
-							<a href="Market2.jsp">
+							<a href="Market.jsp">
 								<div class="overlay">
 									<h2>오늘 너의 건치가 보고싶어서..</h2>
 									<p>꽃다발</p> 
@@ -124,7 +127,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-3"></div>
-							<a href="Market2.jsp">
+							<a href="Market.jsp">
 								<div class="overlay">
 									<h2>혹시 과일이 더 좋아?..</h2>
 									<p>꽃바구니</p> 
@@ -137,7 +140,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-4"></div>
-							<a href="Market2.jsp">
+							<a href="Market.jsp">
 								<div class="overlay">
 									<h2>오해는 하지 말아줘..  </h2>
 									<p>꽃 상자</p> 
@@ -180,7 +183,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-5"></div>
-							<a href="Market2.jsp">
+							<a href="Market.jsp">
 								<div class="overlay">
 									<h2>꽃을 보니 니가 생각나서..</h2>
 									<p>꽃한송이</p> 
@@ -193,7 +196,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-6"></div>
-							<a href="Market2.jsp">
+							<a href="Market.jsp">
 								<div class="overlay">
 									<h2>오늘 너의 건치가 보고싶어서..</h2>
 									<p>꽃다발</p> 
@@ -213,7 +216,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-7"></div>
-							<a href="Market2.jsp">
+							<a href="Market.jsp">
 								<div class="overlay">
 									<h2>혹시 과일이 더 좋아?..</h2>
 									<p>꽃바구니</p> 
@@ -226,7 +229,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-8"></div>
-							<a href="Market2.jsp">
+							<a href="Market.jsp">
 								<div class="overlay">
 									<h2>오해는 하지 말아줘..  </h2>
 									<p>꽃 상자</p> 
