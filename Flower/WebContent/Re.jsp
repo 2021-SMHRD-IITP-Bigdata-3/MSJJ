@@ -12,10 +12,84 @@
     <meta name="author" content="">
 
     <title>Nevada - Free HTML Bootstrap Template</title>
+     
 
     <!-- Css -->
     <link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/OrderStyle.css" rel="stylesheet">
+	<style>
+        .rating .rate_radio + label {
+    position: relative;
+    display: inline-block;
+    margin-left: -4px;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    background-image: url('./img/starrate.png');
+    background-repeat: no-repeat;
+    background-size: 200px 100px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+.rating .rate_radio:checked + label {
+    background-color: #ff8;
+}
+.wrap{
+    max-width: 480px;
+    margin: 0 auto; /* 화면 가운데로 */
+    background-color: #fff;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+.reviewform textarea{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.rating .rate_radio {
+    position: relative;
+    display: inline-block;
+    z-index: 20;
+    opacity: 0.001;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    cursor: pointer;
+    vertical-align: top;
+    display: none;
+}
+.rating .rate_radio + label {
+    position: relative;
+    display: inline-block;
+    margin-left: -4px;
+    z-index: 10;
+    width: 60px;
+    height: 60px;
+    background-image: url('./img/starrate.png');
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+.rating .rate_radio:checked + label {
+    background-color: #ff8;
+}
+
+.warning_msg {
+    display: none;
+    position: relative;
+    text-align: center;
+    background: #ffffff;
+    line-height: 26px;
+    width: 100%;
+    color: red;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+}
+    </style>
 
 
 </head>
@@ -73,163 +147,39 @@
 			</div>
 		</div>
 	</section>
+	<div class="wrap">
+        <h1>후기</h1>
+        <form name="reviewform" class="reviewform" method="post" action="/save">
+            <input type="hidden" name="rate" id="rate" value="0"/>
+            <p class="title_star">별점과 리뷰를 남겨주세요.</p>
+     
+            <div class="review_rating">
+                <div class="warning_msg">별점을 선택해 주세요.</div>
+                <div class="rating">
+                    <!-- 해당 별점을 클릭하면 해당 별과 그 왼쪽의 모든 별의 체크박스에 checked 적용 -->
+                    <input type="checkbox" name="rating" id="rating1" value="1" class="rate_radio" title="1점">
+                    <label for="rating1"></label>
+                    <input type="checkbox" name="rating" id="rating2" value="2" class="rate_radio" title="2점">
+                    <label for="rating2"></label>
+                    <input type="checkbox" name="rating" id="rating3" value="3" class="rate_radio" title="3점" >
+                    <label for="rating3"></label>
+                    <input type="checkbox" name="rating" id="rating4" value="4" class="rate_radio" title="4점">
+                    <label for="rating4"></label>
+                    <input type="checkbox" name="rating" id="rating5" value="5" class="rate_radio" title="5점">
+                    <label for="rating5"></label>
+                </div>
+            </div>
+            <div class="review_contents">
+                <div class="warning_msg">5자 이상으로 작성해 주세요.</div>
+                <textarea rows="10" class="review_textarea"></textarea>
+            </div>   
+            <div class="cmd">
+                <input type="button" name="save" id="save" value="등록">
+            </div>
+        </form>
+    </div>
 
 	
-	<!-- Slider -->
-	<section class="slider">
-		<div class="container-fluid">
-			<div class="row no-gutter">
-				<div class="col-lg-12">
-					<div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner" role="listbox">
-						<div class="item active">
-						  <img src="img/slide-1.jpg" alt="slide">
-						</div>
-
-						<div class="item">
-						  <img src="img/slide-2.jpg" alt="slide">
-						</div>
-
-						<div class="item">
-						  <img src="img/slide-3.jpg" alt="slide">
-						</div>
-
-						<div class="item">
-						  <img src="img/slide-4.jpg" alt="slide">
-						</div>
-					  </div>
-					  
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<f:form modelAttribute="review" action="${ reviewsPath }" method="post">
-    <c:forEach var="error" items="${ fieldErrors }">
-        <div class="alert alert-warning">
-            <strong>${ error.getField() }</strong>: ${ error.getDefaultMessage() }
-        </div>
-    </c:forEach>
-    <f:textarea path="text" cssClass="form-control" rows="5" />
-    <!-- 평점 선택창 -->
-    <f:label path="rating">평점: </f:label>
-    <f:select path="rating">
-        <f:options items="${ ratingOptions }"/>
-    </f:select>
-    <f:hidden path="bookId" />
-    <f:hidden path="userId" />
-    <button class="btn btn-block btn-primary" type="submit">리뷰 등록</button>
-</f:form>
-	
-	
-	<div style="width:1000px; margin:0 auto;">
-	<style>.starts { color #ff0000;}</style>
-	<div>
-		<div class="wrap">
-    
-    <h1>후기</h1>
-    <form name="reviewform" class="reviewform" method="post" action="/save">
-        <input type="hidden" name="rate" id="rate" value="0"/>
-        <p class="title_star">별점과 리뷰를 남겨주세요.</p>
- 
-        <div class="review_rating">
-            <div class="startRadio">
-  <label class="startRadio__box">
-    <input type="radio" name="star" id="">
-    <span class="startRadio__img"><span class="blind">별 1개</span></span>
-  </label>
-  <label class="startRadio__box">
-    <input type="radio" name="star" id="">
-    <span class="startRadio__img"><span class="blind">별 1.5개</span></span>
-  </label>
-  <label class="startRadio__box">
-    <input type="radio" name="star" id="">
-    <span class="startRadio__img"><span class="blind">별 2개</span></span>
-  </label>
-  <label class="startRadio__box">
-    <input type="radio" name="star" id="">
-    <span class="startRadio__img"><span class="blind">별 2.5개</span></span>
-  </label>
-  <label class="startRadio__box">
-    <input type="radio" name="star" id="">
-    <span class="startRadio__img"><span class="blind">별 3개</span></span>
-  </label>
-  <label class="startRadio__box">
-    <input type="radio" name="star" id="">
-    <span class="startRadio__img"><span class="blind">별 3.5개</span></span>
-  </label>
-  <label class="startRadio__box">
-    <input type="radio" name="star" id="">
-    <span class="startRadio__img"><span class="blind">별 4개</span></span>
-  </label>
-  <label class="startRadio__box">
-    <input type="radio" name="star" id="">
-    <span class="startRadio__img"><span class="blind">별 4.5개</span></span>
-  </label>
-  <label class="startRadio__box">
-    <input type="radio" name="star" id="">
-    <span class="startRadio__img"><span class="blind">별 5개</span></span>
-  </label>
-  <label class="startRadio__box">
-    <input type="radio" name="star" id="">
-    <span class="startRadio__img"><span class="blind">별 5.5개</span></span>
-  </label>
-</div>
-        <div class="review_contents">
-            <div class="warning_msg">5자 이상으로 작성해 주세요.</div>
-            <textarea rows="10" class="review_textarea"></textarea>
-        </div>   
-        <div class="cmd">
-            <input type="button" name="save" id="save" value="등록">
-        </div>
-    </form>
-</div>
-        
-			</div><!-- /.modal-body -->
-		  </div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	  </div><!-- /.modal -->
-	</div><!-- /.container -->
-	
-	
-	
-	
-	
-	<!-- Press -->
-	
-	
-	
-	<!-- Brand -->
-	<section id="brand">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-				   <ul class="logo-list list-inline text-center">
-					
-				  </ul>
-				</div>
-			</div>
-		</div>
-	</section>
-	
-	
-	<!-- Copyright -->
-	<footer>
-		<div class="container">
-			<p class="text-center">Â© 2016 - Designed by <a href="http://www.nicolatolin.com">Nicola Tolin</a></p>
-		</div>
-	</footer>
-	
-	<a href="#page-top" class="cd-top">Top</a>
-	
-
-    <!-- script -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-	<script src="js/modernizr.js"></script>
-	<script src="js/script.js"></script>
 	
 	
 
