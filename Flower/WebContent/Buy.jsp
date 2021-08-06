@@ -85,9 +85,9 @@
 			 	<span style="font-family;noto; font-size:12px; line-height:25px; color:#999;">
 				<img src="아이콘" width="10" height="10">
 				<span style="padding:0 10px 0 10px;">></span>
-				" CUSTOMER "
+				CUSTOMER
 				<span style="padding:0 10px 0 10px;">></span>
-				"주문하기"
+				주문하기
 				</span>
 				</div>
 				</div>

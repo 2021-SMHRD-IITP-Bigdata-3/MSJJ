@@ -15,11 +15,9 @@
 
     <!-- Css -->
     <link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/ReviewBoardStyle.css" rel="stylesheet">
-<link rel="stylesheet" href="css/main.css" />
-<style>
+	<link href="css/OrderStyle.css" rel="stylesheet">
 
-</style>
+
 </head>
 
 <body>
@@ -38,8 +36,8 @@
 					<span class="bar2"></span>
 					<span class="bar3"></span>
 			  </div>
-				<a href="index.jsp">
-					<img src="img/logo.png">
+				<a class="navbar-brand top" href="#">
+					<img src="img/logo.png" alt="">
 				</a>
 
 			</div>
@@ -50,7 +48,6 @@
 			   <li><a href="Choiceflower.jsp">꽃추천</a></li>
 				<li><a href="Market2.jsp">상품</a></li>
 				<li><a href="Mypage.jsp">마이페이지</a></li>
-				<li><a href="ReviewBoard.jsp">Review</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
 			   <%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
@@ -67,99 +64,104 @@
 
 
     <!-- Intro -->
-	<section class="intro">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7">
-					<p><p>
-				</div>
-			</div>
-		</div>
-	</section>
-
 	
 	<!-- Slider -->
-	<section class="slider">
-		
-	</section>
+	
+	<div class="rows navi_category" style="width:1000px; margin:0 auto; ">
+    	<div style="width:650px; float:left; text-align:left; "><span style="font-family:noto; font-size:25px; line-height:25px; color:#333 ;padding-right:10px;">구매내역</span> <span style="font-family:noto_light; font-size:16px; color:#666">꽃으로 사랑하는 사람에게 진심을 전해보세요.</span>
+        </div>
+        <div style="width:350px; float:right;  text-align:right">
+            <span style="font-family:noto; font-size:12px; line-height:25px; color:#999;  "><img src="/urbanflower/images/icon_home.gif" width="10" height="10"> <span style="padding:0 10px 0 10px;">&gt;</span>CUSTOMER<span style="padding:0 10px 0 10px;">&gt;</span>구매내역
+        </span></div>
+    </div>
+	
 	
 	
 	<!-- About 주문상품 그림& 설명-->
-	<header class="top-menu con row">
-    <div class="cell-right">
-  
-    </div>
-</header>
-
-    <h1 class="con"></h1>
-    <section class="article-list table-common con">
-      </section>
-        <div id="wrapper">
-				<!-- Menu -->
-					<nav id="Update">	
-						<table>
-							<caption><h2>리뷰게시판</h2></caption>
-							<tr>
-								<td>글번호</td>
-								<td>제목</td>
-								<td>작성자</td>	
-								<td>평점</td>						
-							</tr>
-							
-							 
-								<tr>
-									<td>1</td>
-									<td>꽃 완전 대박이에요</td>
-									<td>김아무개</td>		
-									<td>4</td>					
-								</tr>
-								<tr>
-									<td>1</td>
-									<td>꽃 완전 대박이에요</td>
-									<td>김아무개</td>		
-									<td>4</td>					
-								</tr>
-								 
-								 <tr>
-									<td>1</td>
-									<td>꽃 완전 대박이에요</td>
-									<td>김아무개</td>		
-									<td>4</td>					
-								</tr>
-								 
-								 <tr>
-									<td>1</td>
-									<td>꽃 완전 대박이에요</td>
-									<td>김아무개</td>		
-									<td>4</td>					
-								</tr>
-								 
-								 
-							<!-- 2.모든 회원의 이메일(email),전화번호(tel),주소(address)를 출력하시오. -->
-						</table>
-					</nav>		
-						
-			</div>
-  
-
-   
-    
-</div>
-
-<footer></footer>
+	
 	<section class="about" id="about">
 		<div class="container about">
 			<div class="row">
 				<div class="col-md-6 big-letter">
+				<!-- 반복문으로 구매상품 출력 -->
+				
+					<a>
+						<img src="orderflower.jpg" width = "400px" height= "400px">
+					</a>
+					<br>
+						<p>
+							상품이름  :
+							<br>
+							상품가격  :
+							<br>
+							꽃말 : 
+							<br>
+							구매일자 :
+							<br>
+				<form>
+							매장이름 및 주소 :
+							<br>
+							<input type="button" value="리뷰쓰기">
+						</p>
+				</form>
+
+
 					
+					<br>
+					<a>
+						<img src="orderflower.jpg" width = "400px" height= "400px">
+					</a>
+					<br>
+						<p>
+							상품이름  :
+							<br>
+							상품가격  :
+							<br>
+							꽃말 : 
+							<br>
+							구매일자 :
+							<br>
+				<form>
+							매장이름 및 주소 :
+							<br>
+							<input type="button" value="리뷰쓰기">
+						</p>
+				</form>
+
+
 					
-				</table>
+					<br>
+					<a>
+						<img src="orderflower.jpg" width = "400px" height= "400px">
+					</a>
+					<br>
+						<p>
+							상품이름  :
+							<br>
+							상품가격  :
+							<br>
+							꽃말 : 
+							<br>
+							구매일자 :
+							<br>
+				<form>
+							매장이름 및 주소 :
+							<br>
+							<input type="button" value="리뷰쓰기">
+						</p>
+				</form>
+
+
+					
+					<br>
+					
 				</div>
 				<div class="col-md-6">
 					<p style="text-align: right;">
 					
 					
-				
+					
+					
 					
 					</p>
 					<br>

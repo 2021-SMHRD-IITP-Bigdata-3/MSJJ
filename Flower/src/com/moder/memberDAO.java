@@ -25,9 +25,9 @@ public class memberDAO {
 	
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			
-			String url ="jdbc:oracle:thin:@localhost:1521:xe";
-			String dbid="hr";
-			String dbpw="hr";
+			String url ="jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+			String dbid="campus_f4";
+			String dbpw="smhrd4";
 			
 			conn = DriverManager.getConnection(url, dbid, dbpw);
 			
@@ -93,7 +93,7 @@ public class memberDAO {
 				String tel = rs.getString(4);
 				
 				
-				info = new memberDTO( name, email, pw, tel);
+				info = new memberDTO(name, email, pw, tel);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
