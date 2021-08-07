@@ -105,19 +105,20 @@ public class recommDAO {
 		
 	}
 	
-	public ArrayList<productDTO> recomm_product(ArrayList<mixDTO> list) {
+	public ArrayList<productDTO> recomm_product(ArrayList<mixDTO> list, String flowerType) {
 		try {
 			conn();
 			System.out.println(list.size());
 			for (int i = 0; i<list.size();i++) {
 				System.out.println(list.get(i).getMix_flower());	
 			}
-			
+			int flowerTypeN = Integer.parseInt(flowerType);
 			
 			for (int i = 0; i<list.size();i++) {
-				String sql = "select * from product where product_mix=?";
+				String sql = "select * from product where product_mix=? and product_type=?";
 				psmt = conn.prepareStatement(sql);
 				psmt.setString(1, list.get(i).getMix_flower());
+				psmt.setInt(2, flowerTypeN);
 				rs= psmt.executeQuery();
 				
 				while(rs.next()) {

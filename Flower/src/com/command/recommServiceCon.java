@@ -24,6 +24,7 @@ public class recommServiceCon extends HttpServlet {
 		
 		String eventDay = request.getParameter("eventDay");
 		String flowerMean = request.getParameter("flowerMean");
+		String flowerType = request.getParameter("flowerType");
 		System.out.println(eventDay);
 		System.out.println(flowerMean);
 		
@@ -32,7 +33,7 @@ public class recommServiceCon extends HttpServlet {
 		list = dao.recomm_mix(eventDay, flowerMean);
 		
 		ArrayList<productDTO> list2 = new ArrayList<productDTO>();
-		list2 = dao.recomm_product(list);
+		list2 = dao.recomm_product(list, flowerType);
 		System.out.println(list2);
 		
 		String moveURL = "";

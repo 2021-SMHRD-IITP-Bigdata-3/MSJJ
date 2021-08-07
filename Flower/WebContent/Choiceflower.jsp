@@ -158,8 +158,8 @@
 
 <%if(productList != null) {%>
 	<%for(int i =0; i < productList.size(); i++){%>
-		<%String productImage = '"'+productList.get(i).getProduct_image()+'"';%>
-		<img src = <%= productImage%>>
+		<img src = <%= productList.get(i).getProduct_image()%>>
+		<%= productList.get(i).getProduct_image() %>
 	<%} %>
 <%} %>
 
