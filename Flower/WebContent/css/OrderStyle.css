@@ -22,7 +22,7 @@ h1,h2,h3,h4,h5,h6 {
 
 p{
 	font-family: '굴림';
-	font-weight:300;
+	font-weight:700;
 }
 
 section {
@@ -186,11 +186,11 @@ a:hover,a:focus {
 .big-letter p:first-child:first-letter { 
 	float: left; 
 	color: #222; 
-	font-size: 8em;  
-	line-height: 0.8em; 
+	font-size: 10em;  
+	line-height: 1em; 
 	text-transform: uppercase; 
 	padding-top: 0px;  
-	padding-right: 0.1em; 
+	padding-right: 0em; 
 	padding-left: ��0.03em;	
 }
 

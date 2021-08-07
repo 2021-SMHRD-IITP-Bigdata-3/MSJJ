@@ -56,5 +56,5 @@ constraint board_boardnum_pk primary key(board_number)
 );
 
 select * from product
-
+select * from flower
 

@@ -1,3 +1,8 @@
+<%@page import="com.moder.StoreDTO"%>
+<%@page import="com.moder.flowerDTO"%>
+<%@page import="com.moder.productDTO"%>
+<%@page import="com.moder.mixDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.moder.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -23,9 +28,11 @@
 <body>
 <%
 	memberDTO info = (memberDTO)session.getAttribute("info");
-	
-	
-	
+	ArrayList<mixDTO> mixList = new ArrayList<mixDTO>();
+	ArrayList<productDTO> productList = new ArrayList<productDTO>();
+	ArrayList<flowerDTO> flowerList2 = new ArrayList<flowerDTO>();
+	ArrayList<StoreDTO> storeList= new ArrayList<StoreDTO>();
+		
 %>
 <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -40,7 +47,7 @@
 				</a>
 
 			</div>
-
+			
 			<div class="collapse navbar-collapse" id="main-menu">
 			   <ul class="nav navbar-nav navbar-right">
 			   <%if(info != null){ %>
@@ -67,29 +74,65 @@
     <!-- Intro -->
 	
 	<!-- About 주문상품 그림& 설명-->
+	<% int number = Integer.parseInt(request.getParameter("number"));%>
+	<% int a = Integer.parseInt(request.getParameter("listNum"));%>
 	
+	<% mixList = (ArrayList)session.getAttribute("list");%>
+	<% productList = (ArrayList)session.getAttribute("list2");%>
+	<% flowerList2 = (ArrayList)session.getAttribute("list3");%>
+	<% storeList = (ArrayList)session.getAttribute("list4");%>
+	<%int b= productList.get(a).getProduct_store(); %>
+	
+	<% System.out.println(number);%>
+	<% System.out.println(flowerList2.size());%>
 	<section class="about" id="about">
 		<div class="container about">
 			<div class="row">
 				<div class="col-md-6 big-letter">
 					<p>
-						<img src="orderflower.jpg" width = "700px" height= "700px">
+						<img src=<%=productList.get(a).getProduct_image() %> width = "700px" height= auto>
 					</p>
 					<br>
 					<p>
-						상품이름  :
+						상품명  :<%= productList.get(a).getProduct_name()%>
 						<br>
-						상품가격  :
+						가격  :<%= productList.get(a).getProduct_price()%>원
 						<br>
-						매장이름 및 주소 :
+						<%for (int j = 0; j <= 11; j++) {%>
+							<% if (b == j+1){ %>
+								매장명 : <%= storeList.get(j).getStore_name()%><br>
+								매장주소 : <%= storeList.get(j).getStore_adress()%><br>
+								매장전화번호 : <%= storeList.get(j).getStore_tel()%>
+							<%} %>
+						<%} %>
 						<br>
+						<%for (int j=0; j < mixList.size();j++) {%>
+							<%if(productList.get(a).getProduct_mix().equals(mixList.get(j).getMix_flower())){%>
+								<%String [] useFlower = mixList.get(j).getMix_flower().split("_"); %>
+								사용한 꽃 : 
+								<% for (int i = 0; i<useFlower.length; i++){ %>
+									<%= useFlower[i] %>
+								<%} %>
+								
+								<br>
+								<% for (int i = 0; i<useFlower.length; i++){ %>
+									<%= useFlower[i] %>의 꽃말 :
+									<%for (int k =0; k < 25; k++){ %>
+										<%if(useFlower[i].equals(flowerList2.get(k).getFlower_name())){ %>
+											<%= flowerList2.get(k).getFlower_mean()%><br>
+										<%} %>
+									<%} %>
+								<%} %>
+								<br>
+								<%= mixList.get(j).getMix_ment()%>	
+							<%} %>
+						<%} %>
 						
 						<form>
 							
 							<br>
 							<span><input type="submit" value="결제하기"></span>
 							<br>
-							<span>꽃말 띄워주는 부분</span>
 							
 						</form>
 						

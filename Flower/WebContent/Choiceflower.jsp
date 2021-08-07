@@ -29,6 +29,10 @@
 <body>
 <%
 	memberDTO info = (memberDTO)session.getAttribute("info");
+	ArrayList<mixDTO> mixList = new ArrayList<mixDTO>();
+	ArrayList<productDTO> productList = new ArrayList<productDTO>();
+	ArrayList<flowerDTO> flowerList= new ArrayList<flowerDTO>();
+	ArrayList<StoreDTO> storeList= new ArrayList<StoreDTO>();
 %>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -157,26 +161,32 @@
 	</table>
 </form>
 
-<% ArrayList<mixDTO> mixList = (ArrayList)session.getAttribute("list1");%>
-<% ArrayList<productDTO> productList = (ArrayList)session.getAttribute("list2");%>
-<% ArrayList<flowerDTO> flowerList = (ArrayList)session.getAttribute("list3");%>
-<% ArrayList<StoreDTO> storeList = (ArrayList)session.getAttribute("list4");%>
+<% mixList = (ArrayList)session.getAttribute("list");%>
+<% productList = (ArrayList)session.getAttribute("list2");%>
+<% flowerList = (ArrayList)session.getAttribute("list3");%>
+<% storeList = (ArrayList)session.getAttribute("list4");%>
 
 <%if(productList != null) {%>
 	<%for(int i =0; i < productList.size(); i++){%>
 	<%int a = productList.get(i).getProduct_store(); %>
-		<table>
+		<table align = "center">
 		<tr>
-			<td>			
-				<img src = <%= productList.get(i).getProduct_image()%>>
+			<td width = "700px" height = 1000px >			
+				<a href = "Order.jsp?number=<%= productList.get(i).getProduct_number()%>&listNum=<%=i%>"> <img width = "500px" height = auto src = <%= productList.get(i).getProduct_image()%>></a>
 			<td>
-			<td>
+			<td width = "200px">
 				상품명 : <%= productList.get(i).getProduct_name()%><br>
-				가격 : <%= productList.get(i).getProduct_price()%>원
+				가격 : <%= productList.get(i).getProduct_price()%>원<br>
+				
+				<%for (int j=0; j < mixList.size();j++) {%>
+					<%if(productList.get(i).getProduct_mix().equals(mixList.get(j).getMix_flower())){%>
+						<%= mixList.get(j).getMix_ment()%>	
+					<%} %>
+				<%} %>
 			</td>
-			<td>
-				<%for (int j = 1; j <= 12; j++) {%>
-					<% if (a == j){ %>
+			<td width = "500px">
+				<%for (int j = 0; j <= 11; j++) {%>
+					<% if (a == j+1){ %>
 						매장명 : <%= storeList.get(j).getStore_name()%><br>
 						매장주소 : <%= storeList.get(j).getStore_adress()%><br>
 						매장전화번호 : <%= storeList.get(j).getStore_tel()%>

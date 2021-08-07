@@ -17,7 +17,6 @@ public class recommDAO {
 	ArrayList<productDTO> list2 = new ArrayList<productDTO>();
 	ArrayList<flowerDTO> list3 = new ArrayList<flowerDTO>();
 	ArrayList<StoreDTO> list4 = new ArrayList<StoreDTO>();
-	flowerDTO flower = null;
 
 	
 //	
@@ -145,27 +144,21 @@ public class recommDAO {
 	public ArrayList<flowerDTO> recomm_flower(ArrayList<productDTO> list2) {
 		try {
 			conn();
-			System.out.println(list2.size());
-			for (int i = 0; i < list2.size() ; i++) {
-				System.out.println("flower에서 조합목록"+list2.get(i).getProduct_mix());
-				String[] flowerNameList = list2.get(i).getProduct_mix().split("_");
-				for (int j =0 ; j < flowerNameList.length; j++) {
-					String sql = "select * from flower where flower_name=?";
-					psmt = conn.prepareStatement(sql);
-					psmt.setString(1, flowerNameList[j]);
-					rs= psmt.executeQuery();
+			String sql = "select * from flower";
+			psmt = conn.prepareStatement(sql);
+			rs= psmt.executeQuery();
 					
-					while(rs.next()) {
-						if (rs != null) {
-							String flowerName = rs.getString(1);
-							String flowerMean = rs.getString(2);
-							String flowerImage = rs.getString(3);
-							flowerDTO dto = new flowerDTO(flowerName, flowerMean, flowerImage);
-							list3.add(dto);
-						}
-					}	
+			while(rs.next()) {
+				if (rs != null) {
+					String flowerName = rs.getString(1);
+					String flowerMean = rs.getString(2);
+					String flowerImage = rs.getString(3);
+					flowerDTO dto = new flowerDTO(flowerName, flowerMean, flowerImage);
+					list3.add(dto);
 				}
-			}			
+			}	
+				
+					
 			
 			
 		} catch (SQLException e) {
