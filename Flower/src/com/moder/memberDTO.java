@@ -8,6 +8,12 @@ public class memberDTO {
 	private String tel;
 	
 	
+	public memberDTO(String pw, String name, String tel) {
+		super();
+		this.pw = pw;
+		this.name = name;
+		this.tel = tel;
+	}
 	public String getName() {
 		return name;
 	}

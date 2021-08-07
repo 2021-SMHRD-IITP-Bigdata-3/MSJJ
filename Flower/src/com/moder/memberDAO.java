@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.sun.corba.se.spi.legacy.connection.GetEndPointInfoAgainException;
 
 public class memberDAO {
 	
@@ -101,6 +100,27 @@ public class memberDAO {
 			close();
 		}return info;
 		
+	}
+public int update(memberDTO dto) {
+		
+		
+		try {
+			conn();
+			String sql = "upate flower_member set pw=?, name=?, tel=? where email=?";
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setString(1, dto.getPw());
+			psmt.setString(2, dto.getName());
+			psmt.setString(3, dto.getTel());
+			
+			cnt = psmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return cnt;
 	}
 	
 }

@@ -272,7 +272,7 @@ scrollbar-arrow-color: #838383;
 
 
 <!-- 마이페이지 본문 -->
-<form id="form" name="frmMember" method="post" action="UpdateServiceCon">
+<form id="form" name="frmMember" method="post" action="updateServiceCon">
 
 <div style="text-align: right;margin-bottom: 10px;font-size:12px;"><font color="FF6000">* </font><font class="small"><b>필수입력사항</b></font></div>
 <div style="border:1px solid #DEDEDE;" class="hundred">
@@ -288,7 +288,7 @@ scrollbar-arrow-color: #838383;
 <tbody><tr style="height:50px;">
    <td class="memberCols1"><font color="FF6000">*</font> 아이디</td>
    <td class="memberCols2">
-   <span class="eng"><b>회원아이디</b></span>
+   <span class="eng"><b><%=info.getEmail()%></b></span>
    </td>
 </tr>
 <tr><td colspan="2" height="1" bgcolor="#DEDEDE" style="padding:0px;"></td></tr>
@@ -316,7 +316,7 @@ scrollbar-arrow-color: #838383;
 <tr style="height:70px;">
    <td class="memberCols1"><font color="FF6000">*</font> 핸드폰</td>
    <td class="memberCols2">
-   <input type="text" name="mobile[]" id="mobile0" style="width:200px;" placeholder="번호를 입력하세요" size="4" maxlength="4" required="" option="regNum" label="핸드폰">
+   <input type="text" name="mobile[]" id="mobile0" style="width:200px;" placeholder="번호를 입력하세요" size="4" maxlength="11" required="" option="regNum" label="핸드폰">
    
    
    </td>

@@ -6,12 +6,39 @@ public class BoardDTO {
 	private String email;
 	private String content;
 	private String b_date;
+	private String name;
+	private String tel;
+	private String pw;
 	
 	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+	public String getPw() {
+		return pw;
+	}
+	public void setPw(String pw) {
+		this.pw = pw;
+	}
 	public BoardDTO(String email, String content) {
 		super();
 		this.email = email;
 		this.content = content;
+	}
+	public BoardDTO(String pw, String name, String tel) {
+		super();
+		this.pw = pw;
+		this.name = name;
+		this.tel = tel;
 	}
 	public BoardDTO(int num, String email, String content, String b_date) {
 		super();
