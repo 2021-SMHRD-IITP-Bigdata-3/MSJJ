@@ -44,26 +44,22 @@
 
 			<div class="collapse navbar-collapse" id="main-menu">
 			   <ul class="nav navbar-nav navbar-right">
-<<<<<<< HEAD
-				<%if(info != null){ %>
-			    <li><a href="Choiceflower.jsp">꽃추천</a></li>
-				<li><a href="Market2.jsp">상품</a></li>
-=======
-			   <%if(info != null){ %>
-			   <li><a href="Choiceflower.jsp">꽃추천</a></li>
+
+		
+
+			<%if(info != null){ %>
+				<li><a href="Choiceflower.jsp">꽃추천</a></li>
 				<li><a href="Market.jsp">상품</a></li>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-IITP-Bigdata-3/MSJJ.git
 				<li><a href="Mypage.jsp">마이페이지</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
 				<li><a href="ReviewBoard.jsp">리뷰 </a></li>
-			   <%}else{ %>
+			<%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
 				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
 				<li><a href="ReviewBoard.jsp">리뷰</a></li>
-				
-				<%} %>
+			<%} %>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
@@ -160,32 +156,13 @@
 
 <% ArrayList<productDTO>productList = (ArrayList)session.getAttribute("list2");%>
 
-<%if(productList != null){
-	System.out.println(productList.size());
-	for(int i =0; i < productList.size(); i++){%>
-		<%= productList.get(i).getProduct_image()%>
-		<img src = "<%= productList.get(i).getProduct_image()%>">
-	<% }%>	
+<%if(productList != null) {%>
+	<%for(int i =0; i < productList.size(); i++){%>
+		<%String productImage = '"'+productList.get(i).getProduct_image()+'"';%>
+		<img src = <%= productImage%>>
+	<%} %>
 <%} %>
 
-
-
-
-
-
-
-	<br>
-	
-<<<<<<< HEAD
-	
-
-	<br>
-=======
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-IITP-Bigdata-3/MSJJ.git
-	
-				
-				
-		
 	
 	<!-- End Gallery -->
 
