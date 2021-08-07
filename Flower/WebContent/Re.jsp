@@ -137,13 +137,20 @@
 		</div><!-- /.container-fluid -->
 	</nav>
   
-
-
+<div class="rows navi_category" style="width:1000px; margin:0 auto; ">
+    	<div style="width:650px; float:left; text-align:left; "><span style="font-family:noto; font-size:25px; line-height:25px; color:#333 ;padding-right:10px;">리뷰작성</span> <span style="font-family:noto_light; font-size:16px; color:#666">꽃으로 사랑하는 사람에게 진심을 전해보세요.</span>
+        </div>
+        <div style="width:350px; float:right;  text-align:right">
+            <span style="font-family:noto; font-size:12px; line-height:25px; color:#999;  "><img src="/urbanflower/images/icon_home.gif" width="10" height="10"> <span style="padding:0 10px 0 10px;">&gt;</span>CUSTOMER<span style="padding:0 10px 0 10px;">&gt;</span>리뷰게시판
+        </span></div>
+       
+    </div>
+<br>
 
     <!-- Intro -->
 	
 	<div class="wrap">
-        <h1>후기</h1>
+        <h1></h1>
         <form name="reviewform" class="reviewform" method="post" action="WriteBoardServiceCon">
             <input type="hidden" name="rate" id="rate" value="0"/>
             <p>
