@@ -16,6 +16,7 @@ public class recommDAO {
 	ArrayList<mixDTO> list = new ArrayList<mixDTO>();
 	ArrayList<productDTO> list2 = new ArrayList<productDTO>();
 	ArrayList<flowerDTO> list3 = new ArrayList<flowerDTO>();
+	ArrayList<StoreDTO> list4 = new ArrayList<StoreDTO>();
 	flowerDTO flower = null;
 
 	
@@ -108,10 +109,6 @@ public class recommDAO {
 	public ArrayList<productDTO> recomm_product(ArrayList<mixDTO> list, String flowerType) {
 		try {
 			conn();
-			System.out.println(list.size());
-			for (int i = 0; i<list.size();i++) {
-				System.out.println(list.get(i).getMix_flower());	
-			}
 			int flowerTypeN = Integer.parseInt(flowerType);
 			
 			for (int i = 0; i<list.size();i++) {
@@ -133,6 +130,7 @@ public class recommDAO {
 						int productStore = Integer.parseInt(rs.getNString(8));
 						productDTO dto = new productDTO(num, productMix, productName, productType, productPrice, productImage, productRecomm, productStore);
 						list2.add(dto);
+						System.out.println("dto에 들어감"+productMix);
 					}
 				}
 			}			
@@ -144,6 +142,69 @@ public class recommDAO {
 			close();
 		}return list2;
 	}
+	public ArrayList<flowerDTO> recomm_flower(ArrayList<productDTO> list2) {
+		try {
+			conn();
+			System.out.println(list2.size());
+			for (int i = 0; i < list2.size() ; i++) {
+				System.out.println("flower에서 조합목록"+list2.get(i).getProduct_mix());
+				String[] flowerNameList = list2.get(i).getProduct_mix().split("_");
+				for (int j =0 ; j < flowerNameList.length; j++) {
+					String sql = "select * from flower where flower_name=?";
+					psmt = conn.prepareStatement(sql);
+					psmt.setString(1, flowerNameList[j]);
+					rs= psmt.executeQuery();
+					
+					while(rs.next()) {
+						if (rs != null) {
+							String flowerName = rs.getString(1);
+							String flowerMean = rs.getString(2);
+							String flowerImage = rs.getString(3);
+							flowerDTO dto = new flowerDTO(flowerName, flowerMean, flowerImage);
+							list3.add(dto);
+						}
+					}	
+				}
+			}			
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}return list3;
+		
+	}
 	
-	
+	public ArrayList<StoreDTO> recomm_store(ArrayList<productDTO> list2) {
+		try {
+			conn();
+			
+			for (int i = 0; i<list2.size();i++) {
+				String sql = "select * from store where store_num=?";
+				psmt = conn.prepareStatement(sql);
+				psmt.setInt(1, list2.get(i).getProduct_store());
+				rs= psmt.executeQuery();
+				
+				while(rs.next()) {
+					if (rs != null) {
+						int num = Integer.parseInt(rs.getString(1));
+						String storeName = rs.getString(2);
+						String storeTel = rs.getString(3);
+						String storeAddress = rs.getString(4);
+						String storeImage = rs.getString(5);
+						StoreDTO dto = new StoreDTO(num, storeName, storeTel, storeAddress, storeImage);
+						list4.add(dto);
+					}
+				}
+			}			
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}return list4;
+		
+	}
 }

@@ -1,3 +1,6 @@
+<%@page import="com.moder.StoreDTO"%>
+<%@page import="com.moder.flowerDTO"%>
+<%@page import="com.moder.mixDTO"%>
 <%@page import="com.moder.recommDAO"%>
 <%@page import="com.moder.productDTO"%>
 <%@page import="java.util.ArrayList"%>
@@ -154,12 +157,35 @@
 	</table>
 </form>
 
-<% ArrayList<productDTO>productList = (ArrayList)session.getAttribute("list2");%>
+<% ArrayList<mixDTO> mixList = (ArrayList)session.getAttribute("list1");%>
+<% ArrayList<productDTO> productList = (ArrayList)session.getAttribute("list2");%>
+<% ArrayList<flowerDTO> flowerList = (ArrayList)session.getAttribute("list3");%>
+<% ArrayList<StoreDTO> storeList = (ArrayList)session.getAttribute("list4");%>
 
 <%if(productList != null) {%>
 	<%for(int i =0; i < productList.size(); i++){%>
-		<img src = <%= productList.get(i).getProduct_image()%>>
-		<%= productList.get(i).getProduct_image() %>
+	<%int a = productList.get(i).getProduct_store(); %>
+		<table>
+		<tr>
+			<td>			
+				<img src = <%= productList.get(i).getProduct_image()%>>
+			<td>
+			<td>
+				상품명 : <%= productList.get(i).getProduct_name()%><br>
+				가격 : <%= productList.get(i).getProduct_price()%>원
+			</td>
+			<td>
+				<%for (int j = 1; j <= 12; j++) {%>
+					<% if (a == j){ %>
+						매장명 : <%= storeList.get(j).getStore_name()%><br>
+						매장주소 : <%= storeList.get(j).getStore_adress()%><br>
+						매장전화번호 : <%= storeList.get(j).getStore_tel()%>
+					<%} %>
+				<%} %>
+				
+			</td>
+		</tr>
+		</table>
 	<%} %>
 <%} %>
 

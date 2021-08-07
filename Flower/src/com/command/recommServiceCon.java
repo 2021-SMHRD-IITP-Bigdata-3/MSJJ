@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.moder.StoreDTO;
+import com.moder.flowerDTO;
 import com.moder.memberDAO;
 import com.moder.mixDTO;
 import com.moder.productDTO;
@@ -34,13 +36,21 @@ public class recommServiceCon extends HttpServlet {
 		
 		ArrayList<productDTO> list2 = new ArrayList<productDTO>();
 		list2 = dao.recomm_product(list, flowerType);
-		System.out.println(list2);
+		
+		ArrayList<flowerDTO> list3 = new ArrayList<flowerDTO>();
+		list3 = dao.recomm_flower(list2);
+		
+		ArrayList<StoreDTO> list4 = new ArrayList<StoreDTO>();
+		list4 = dao.recomm_store(list2);
 		
 		String moveURL = "";
 		if(list2 != null) {
 			System.out.println("성공");
 			HttpSession session = request.getSession();
+			session.setAttribute("list", list);
 			session.setAttribute("list2", list2);
+			session.setAttribute("list3", list3);
+			session.setAttribute("list4", list4);
 			moveURL = "Choiceflower.jsp";
 		}else{
 			System.out.println("실패");

@@ -145,6 +145,18 @@ values(401008, '빨강장미_소국','뜨거운 진심', 4 ,90000, '"./img/1/4/401008.jpg"'
 insert into product 
 values(401009, '소국','뜨거운 진심', 4 ,90000, '"./img/1/4/401009.jpg"', 'T', 1);
 insert into product 
+values(202001, '빨강장미','불타는 사랑', 2 ,60000, '"./img/2/2/202001.jpg"', 'F', 2);
+insert into product 
+values(202002, '빨강장미_소국','불타는 사랑', 2 ,60000, '"./img/2/2/202002.jpg"', 'F', 2);
+insert into product 
+values(302001, '카네이션','감사와 사랑을 전하는 꽃 다발', 3 ,70000, '"./img/8/3/302001.jpg"', 'F', 2);
+insert into product 
+values(302002, '프리지아','앞날을 축복하는 꽃 다발', 3 ,70000, '"./img/8/3/302002.jpg"', 'F', 2);
+insert into product 
+values(402001, '빨강장미','사랑을 전하는 꽃 상자', 4 ,90000, '"./img/8/4/402001.jpg"', 'F', 2);
+insert into product 
+values(402002, '백합','사랑을 전하는 꽃 상자', 4 ,90000, '"./img/8/4/402002.jpg"', 'F', 2);
+insert into product 
 values(203001, '노랑안개','노랑안개꽃다발', 2 ,50000, '"./img/03/2/ym_2_5.jpg"', 'T', 3);
 insert into product 
 values(203002, '빨강장미','지금 이 순간', 2 ,60000, '"./img/03/2/rr_2_6.jpg"', 'F', 3);
@@ -291,7 +303,7 @@ values(204008, '빨강장미','빨간 입술', 2 ,60000, '"./img/4/2/rr_28.jpg"', 'F', 4
 insert into product 
 values(204009, '빨강장미','붉은 꽃잎', 2 ,50000, '"./img/4/2/rr_29.jpg"', 'F', 4);
 insert into product 
-values(204011, '빨강장미_하얀안개','구름 위의 붉은 사랑', 2 ,50000, '"./img/4/2/rr_wm_2"', 'F', 4);
+values(204011, '빨강장미_하얀안개','구름 위의 붉은 사랑', 2 ,50000, '"./img/4/2/rr_wm_2.jpg"', 'F', 4);
 insert into product 
 values(204012, '빨강장미_하얀안개','안개에 숨은 붉은 장미', 2 ,60000, '"./img/4/2/rr_wm_22.jpg"', 'F', 4);
 insert into product 
@@ -321,7 +333,7 @@ values(204024, '해바라기','넌 나의 태양', 2 ,100000, '"./img/4/2/s_23.jpg"', 'F'
 insert into product 
 values(204025, '하얀안개','하얀 안개 꽃다발', 2 ,60000, '"./img/4/2/wm_21.jpg"', 'F', 4);
 insert into product 
-values(204025, '하얀안개','화이트 안개 꽃다발', 2 ,60000, '"./img/4/2/wm_22.jpg"', 'F', 4);
+values(204026, '하얀안개','화이트 안개 꽃다발', 2 ,60000, '"./img/4/2/wm_22.jpg"', 'F', 4);
 insert into product 
 values(304001, '노랑장미','노란 바구니', 3 ,70000, '"./img/4/3/yr_3.jpg"', 'F', 4);
 insert into product 
@@ -645,7 +657,7 @@ values(309006, '분홍장미_소국_거베라','행복한 사랑_진심', 3 ,60000, '"./img/9/3/
 insert into product 
 values(309007, '분홍장미_카네이션_거베라','존경_감사', 3 ,60000, '"./img/9/3/309007.png"', 'T', 9);
 insert into product 
-values(309008, '분홍장미_카네이션',''존경_감사', 3 ,60000, '"./img/9/3/309008.png"', 'T', 9);
+values(309008, '분홍장미_카네이션','존경_감사', 3 ,60000, '"./img/9/3/309008.png"', 'T', 9);
 insert into product 
 values(309009, '분홍장미_하얀장미','행복한 사랑', 3 ,70000, '"./img/9/3/309009.png"', 'T', 9);
 insert into product 
@@ -808,3 +820,5 @@ insert into product
 values(312009, '분홍장미_수국','행복한 사랑_진심', 3 ,90000, '"./img/12/3/312009.jpg"', 'T', 12);
 insert into product 
 values(412001, '빨강장미','열렬한 사랑', 4 ,100000, '"./img/12/4/412001.jpg"', 'T', 12);
+
+update product set product_image = '"./img/4/2/rr_wm_2.jpg"' where product_number = 204011;
