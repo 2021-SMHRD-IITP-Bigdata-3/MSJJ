@@ -22,8 +22,9 @@ public class updateServiceCon extends HttpServlet {
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
 		String tel = request.getParameter("tel");
-		
-		
+		System.out.println(pw);
+		System.out.println(name);
+		System.out.println(tel);
 		// 현재 내가 로그인한 이메일 가지고 오기
 		HttpSession session = request.getSession();
 		memberDTO info = (memberDTO)session.getAttribute("info");
@@ -31,7 +32,7 @@ public class updateServiceCon extends HttpServlet {
 		
 		// 로그인 정보가 담겨있는 info변수에 수정할 pw, tel, addr로 덮어씌우기
 		
-		info = new memberDTO(email, pw, name, tel);
+		info = new memberDTO(name, pw, tel, email);
 		memberDAO dao = new memberDAO();
 		int cnt = dao.update(info);
 		

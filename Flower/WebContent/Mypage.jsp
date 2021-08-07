@@ -307,7 +307,7 @@ scrollbar-arrow-color: #838383;
 <tr style="height:50px;">
    <td class="memberCols1"><font color="FF6000">*</font> 이름</td>
    <td class="memberCols2">
-   <input type="text" style="width:200px;" name="name" placeholder="이름을 입력하세요" required="" fld_esssential="" label="이름">
+   <input type="text" style="width:200px;" name="name" placeholder="이름을 입력하세요"  fld_esssential="" label="이름">
    </td>
 </tr>
 
@@ -316,7 +316,7 @@ scrollbar-arrow-color: #838383;
 <tr style="height:70px;">
    <td class="memberCols1"><font color="FF6000">*</font> 핸드폰</td>
    <td class="memberCols2">
-   <input type="text" name="mobile[]" id="mobile0" style="width:200px;" placeholder="번호를 입력하세요" size="4" maxlength="11" required="" option="regNum" label="핸드폰">
+   <input type="text" name="tel"  style="width:200px;" placeholder="번호를 입력하세요" size="4" maxlength="11" required="" option="regNum" label="핸드폰">
    
    
    </td>

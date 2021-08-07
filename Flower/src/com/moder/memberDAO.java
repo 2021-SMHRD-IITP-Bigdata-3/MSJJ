@@ -106,12 +106,13 @@ public int update(memberDTO dto) {
 		
 		try {
 			conn();
-			String sql = "upate flower_member set pw=?, name=?, tel=? where email=?";
+			String sql = "update flower_member set member_name=?, member_pw=?, member_tel=? where member_email=?";
 			psmt = conn.prepareStatement(sql);
 			
-			psmt.setString(1, dto.getPw());
-			psmt.setString(2, dto.getName());
+			psmt.setString(1, dto.getName());
+			psmt.setString(2, dto.getPw());
 			psmt.setString(3, dto.getTel());
+			psmt.setNString(4, dto.getEmail());
 			
 			cnt = psmt.executeUpdate();
 			

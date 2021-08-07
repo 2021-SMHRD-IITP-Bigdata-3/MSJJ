@@ -1,14 +1,15 @@
 package com.moder;
 
 public class memberDTO {
-
+	
+	
+	private String name;
 	private String email;
 	private String pw;
-	private String name;
 	private String tel;
 	
 	
-	public memberDTO(String pw, String name, String tel) {
+	public memberDTO(String name, String pw, String tel) {
 		super();
 		this.pw = pw;
 		this.name = name;
