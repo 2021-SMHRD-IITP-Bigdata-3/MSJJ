@@ -40,9 +40,14 @@
 	<% productList = (ArrayList)session.getAttribute("list2");%>
 	<% flowerList2 = (ArrayList)session.getAttribute("list3");%>
 	<% storeList = (ArrayList)session.getAttribute("list4");%>
-	<% int number = Integer.parseInt(request.getParameter("productNum"));%>
-	<% int a = Integer.parseInt(request.getParameter("num"));%>
-	<%int b= Integer.parseInt(request.getParameter("storeNum")); %>
+	
+	
+	<% String productNum = (String)session.getAttribute("productNum");%>
+	<% int number = Integer.parseInt(productNum); %>
+	<% String num = (String)session.getAttribute("num");%>
+	<% int a = Integer.parseInt(num); %>
+	<% String storeNum = (String)session.getAttribute("storeNum");%>
+	<% int b= Integer.parseInt(storeNum); %>
    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
          <div class="navbar-header">

@@ -273,7 +273,7 @@
          </tr>
       </tobody>
    </table>
-       <a href="buy_complete.jsp?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>"><input type="button"style="width:1000px" value="결제완료"></a>      
+       <a href="buylistServiceCon?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>&productPrice=<%=productList.get(a).getProduct_price()%>&id=<%=info.getEmail()%>"><input type="button"style="width:1000px" value="결제완료"></a>      
             
             
             
