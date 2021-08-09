@@ -42,12 +42,13 @@
 	<% storeList = (ArrayList)session.getAttribute("list4");%>
 	
 	
-	<% String productNum = (String)session.getAttribute("productNum");%>
-	<% int number = Integer.parseInt(productNum); %>
-	<% String num = (String)session.getAttribute("num");%>
-	<% int a = Integer.parseInt(num); %>
-	<% String storeNum = (String)session.getAttribute("storeNum");%>
-	<% int b= Integer.parseInt(storeNum); %>
+	<% int number = (Integer)session.getAttribute("productNum");%>
+	
+	<% int a = (Integer)session.getAttribute("num");%>
+	
+	<% int b = (Integer)session.getAttribute("storeNum");%>
+	
+	
    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
          <div class="navbar-header">
@@ -96,7 +97,7 @@
    
    <h1>결제가 완료 되었습니다.</h1>
    <a href="WriteBoard.jsp?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>"><input type="button"style="width:1000px" value="리뷰 쓰러가기"></a>
-   <a href="buylist.jsp?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>"><input type="button"style="width:1000px" value="구매내역으로"></a>
+   <a href="showBuyServiceCon?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>&id=<%=info.getEmail()%>"><input type="button"style="width:1000px" value="구매내역으로"></a>
    <a href="index.jsp"><input type="button"style="width:1000px" value="메인으로"></a>      
             
             

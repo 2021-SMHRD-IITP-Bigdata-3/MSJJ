@@ -27,8 +27,11 @@ public class buylistServiceCon extends HttpServlet {
 		int b = Integer.parseInt(request.getParameter("storeNum"));
 		int productPrice = Integer.parseInt(request.getParameter("productPrice"));
 		String id = request.getParameter("id");
+		String productName = request.getParameter("productName");
+		String productImage = request.getParameter("productImage");
+		String storeName = request.getParameter("storeName");
 		buylistDAO dao = new buylistDAO();
-		int cnt = dao.insertBuylist(productNum, a, b, productPrice, id);
+		int cnt = dao.insertBuylist(productNum, a, b, productPrice, id, productName, productImage, storeName);
 		
 		if (cnt>0) {
 			System.out.println("구매리스트 등록 성공");

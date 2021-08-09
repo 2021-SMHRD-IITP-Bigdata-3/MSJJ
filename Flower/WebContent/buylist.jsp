@@ -1,3 +1,4 @@
+<%@page import="com.moder.buyDTO"%>
 <%@page import="com.moder.StoreDTO"%>
 <%@page import="com.moder.flowerDTO"%>
 <%@page import="com.moder.productDTO"%>
@@ -32,6 +33,7 @@
 	ArrayList<productDTO> productList = new ArrayList<productDTO>();
 	ArrayList<flowerDTO> flowerList2 = new ArrayList<flowerDTO>();
 	ArrayList<StoreDTO> storeList= new ArrayList<StoreDTO>();
+	ArrayList<buyDTO> buyList = new ArrayList<buyDTO>();
 		
 %>
 
@@ -39,9 +41,10 @@
 	<% productList = (ArrayList)session.getAttribute("list2");%>
 	<% flowerList2 = (ArrayList)session.getAttribute("list3");%>
 	<% storeList = (ArrayList)session.getAttribute("list4");%>
-	<% int number = Integer.parseInt(request.getParameter("productNum"));%>
-	<% int a = Integer.parseInt(request.getParameter("num"));%>
-	<%int b= Integer.parseInt(request.getParameter("storeNum")); %>
+	<% buyList = (ArrayList)session.getAttribute("buyList");%>
+	<% int number = 0;%>
+	<% int a = 0;%>
+	<% int b = 0; %>
 	
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -103,73 +106,31 @@
 				<div class="col-md-6 big-letter">
 				<!-- 반복문으로 구매상품 출력 -->
 				
-					<a>
-						<img src="orderflower.jpg" width = "400px" height= "400px">
-					</a>
-					<br>
-						<p>
-							상품이름  :
-							<br>
-							상품가격  :
-							<br>
-							꽃말 : 
-							<br>
-							구매일자 :
-							<br>
-				<form>
-							매장이름 및 주소 :
-							<br>
-							<input type="button" value="리뷰쓰기">
-						</p>
-				</form>
-
-
 					
 					<br>
-					<a>
-						<img src="orderflower.jpg" width = "400px" height= "400px">
-					</a>
-					<br>
 						<p>
-							상품이름  :
+						
+						<%for (int i = 0; i < buyList.size(); i++){ %>
+							상품이름:  
+									<%= buyList.get(i).getBuy_productName() %><br>
+									<img src= <%= buyList.get(i).getBuy_productImage()%> width = "700px" height= auto>
+																
 							<br>
-							상품가격  :
+							상품가격: <%= buyList.get(i).getBuy_price() %>
 							<br>
-							꽃말 : 
+							구매일자: <%= buyList.get(i).getBuy_date() %>
 							<br>
-							구매일자 :
+							매장이름: <%= buyList.get(i).getBuy_productStoreName() %>
 							<br>
-				<form>
-							매장이름 및 주소 :
-							<br>
-							<input type="button" value="리뷰쓰기">
+							<a href = "WriteBoard.jsp?num=<%=i%>&productNum=<%=buyList.get(i).getBuy_productNum()%>&storeNum=<%=buyList.get(i).getBuy_store()%>"><input type="button" value="리뷰쓰기"></a>
+							<br><br><br>
+							
+							
+						<%} %>
+							
 						</p>
-				</form>
-
-
-					
-					<br>
-					<a>
-						<img src="orderflower.jpg" width = "400px" height= "400px">
-					</a>
-					<br>
-						<p>
-							상품이름  :
-							<br>
-							상품가격  :
-							<br>
-							꽃말 : 
-							<br>
-							구매일자 :
-							<br>
-				<form>
-							매장이름 및 주소 :
-							<br>
-							<input type="button" value="리뷰쓰기">
-						</p>
-				</form>
-
-
+				
+				
 					
 					<br>
 					

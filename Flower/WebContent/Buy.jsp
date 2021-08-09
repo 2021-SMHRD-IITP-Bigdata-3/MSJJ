@@ -117,18 +117,20 @@
       <div class = "rows hover_bg" style = "width :1000px; margin:0 auto; text-align:left; clear:both; position:relative;">
       
          <br><br><br>
-
+<% String img = productList.get(a).getProduct_image(); %>
+<% String na = productList.get(a).getProduct_name(); %>
+<% String stn = storeList.get(b-1).getStore_name(); %>
       <div class = "rows_indi_item">
          <div style = "width:739px; float:right; text-align:center">
-            <img src = <%=productList.get(a).getProduct_image() %>  width="700" height= auto>
+            <img src = <%= img %>  width="700" height= auto>
          </div>
          <div style = "width:261px; float:left; text-align:center; display: table; height:100%">
             <div class = "clearboth" style = "font-size:25px; font-family:'noto'; display:table-cell; vertical-align: middle; text-align:center; width:100%; height:100%">
             <span style="font-size:18px;"></span>
             <br>
-            <span style="font-size:26px; font-weight:bold;"><%=productList.get(a).getProduct_name() %></span>
+            <span style="font-size:26px; font-weight:bold;"><%=na %></span>
             <br>
-            <span style="font-size: 14px; color: #EA604F;"><%= storeList.get(b-1).getStore_name()%></span>
+            <span style="font-size: 14px; color: #EA604F;"><%= stn%></span>
             <div class="clearboth" style="padding:10px 5px 0px 5px; font-size:20px;"><%= productList.get(a).getProduct_price()%>원</div>
             
             </div>
@@ -273,7 +275,7 @@
          </tr>
       </tobody>
    </table>
-       <a href="buylistServiceCon?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>&productPrice=<%=productList.get(a).getProduct_price()%>&id=<%=info.getEmail()%>"><input type="button"style="width:1000px" value="결제완료"></a>      
+       <a href="buylistServiceCon?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>&productPrice=<%=productList.get(a).getProduct_price()%>&id=<%=info.getEmail()%>&productName=<%=na%>&productImage=<%=img%>&storeName=<%= stn%>"><input type="button"style="width:1000px" value="결제완료"></a>      
             
             
             

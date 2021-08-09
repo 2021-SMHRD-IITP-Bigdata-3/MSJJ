@@ -115,7 +115,7 @@
 	<% storeList = (ArrayList)session.getAttribute("list4");%>
 	<% int number = Integer.parseInt(request.getParameter("productNum"));%>
 	<% int a = Integer.parseInt(request.getParameter("num"));%>
-	<% int b= Integer.parseInt(request.getParameter("storeNum")); %>
+	<% int b = Integer.parseInt(request.getParameter("storeNum")); %>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -204,7 +204,7 @@
                 <textarea rows="10" class="review_textarea" name = "content"></textarea>
             </div>   
             <div class="cmd">
-                <input type="submit" name="save" id="save" value="등록">
+                <a href =""><input type="button" name="save" id="save" value="등록"> </a>
             </div>
         </form>
     </div>

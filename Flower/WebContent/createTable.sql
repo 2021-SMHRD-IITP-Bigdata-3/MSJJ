@@ -45,7 +45,8 @@ constraint product_productnum_pk primary key(product_number)
 
 create table buy
 (buy_number number(36), buy_productnum number(36), buy_price number(36),
-buy_date date,  buy_event varchar2(100), buy_store number(36), buy_member varchar2(100),
+buy_date date,  buy_event varchar2(100), buy_store number(36), buy_member varchar2(100), 
+buy_productname varchar2(100), buy_productimage varchar2(100), buy_storeName varchar2(100),
 constraint buy_buynum_pk primary key(buy_number)
 );
 
