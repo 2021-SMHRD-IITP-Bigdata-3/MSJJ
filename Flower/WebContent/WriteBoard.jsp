@@ -1,3 +1,8 @@
+<%@page import="com.moder.mixDTO"%>
+<%@page import="com.moder.productDTO"%>
+<%@page import="com.moder.flowerDTO"%>
+<%@page import="com.moder.StoreDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.moder.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -97,10 +102,20 @@
 <body>
 <%
 	memberDTO info = (memberDTO)session.getAttribute("info");
-	
-	
-	
+	ArrayList<mixDTO> mixList = new ArrayList<mixDTO>();
+	ArrayList<productDTO> productList = new ArrayList<productDTO>();
+	ArrayList<flowerDTO> flowerList2 = new ArrayList<flowerDTO>();
+	ArrayList<StoreDTO> storeList= new ArrayList<StoreDTO>();
+		
 %>
+
+	<% mixList = (ArrayList)session.getAttribute("list");%>
+	<% productList = (ArrayList)session.getAttribute("list2");%>
+	<% flowerList2 = (ArrayList)session.getAttribute("list3");%>
+	<% storeList = (ArrayList)session.getAttribute("list4");%>
+	<% int number = Integer.parseInt(request.getParameter("productNum"));%>
+	<% int a = Integer.parseInt(request.getParameter("num"));%>
+	<% int b= Integer.parseInt(request.getParameter("storeNum")); %>
 
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -154,17 +169,16 @@
         <form name="reviewform" class="reviewform" method="post" action="WriteBoardServiceCon">
             <input type="hidden" name="rate" id="rate" value="0"/>
             <p>
-							<td>상품이름  :<% %></td>
-							<br>
-							상품가격  :<% %>
-							<br>
-							구매일자 :<% %>
-							<br>
-							매장       :<% %>
-							<br>
-						</p>
+            <img src = <%=productList.get(a).getProduct_image() %>  width="700" height= auto>
+			상품이름  :<%= productList.get(a).getProduct_name()%>
+			<br>
+			상품가격  :<%= productList.get(a).getProduct_price() %>원
+			<br>
+			매장       :<%= storeList.get(b-1).getStore_name()%>
+			<br>
+			</p>
             <p class="title_star">별점과 리뷰를 남겨주세요.</p>
-     
+     		
             <div class="review_rating">
                 <div class="warning_msg">별점을 선택해 주세요.</div>
                 <div class="rating">
@@ -184,13 +198,13 @@
             <div class="review_contents">
             <tr>
 						<td>작성자</td>
-						<td> : <% %></td>
+						<td> : <%= info.getName()%></td>
 					</tr>
                 <div class="warning_msg">5자 이상으로 작성해 주세요.</div>
                 <textarea rows="10" class="review_textarea" name = "content"></textarea>
             </div>   
             <div class="cmd">
-                <input type="button" name="save" id="save" value="등록">
+                <input type="submit" name="save" id="save" value="등록">
             </div>
         </form>
     </div>

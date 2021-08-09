@@ -89,14 +89,15 @@
 		<div class="container about">
 			<div class="row">
 				<div class="col-md-6 big-letter">
+					
 					<p>
-						<img src=<%=productList.get(a).getProduct_image() %> width = "700px" height= auto>
-					</p>
+						<img src= <%=productList.get(a).getProduct_image() %> width = "700px" height= auto>
+					
 					<br>
-					<p>
-						상품명  :<%= productList.get(a).getProduct_name()%>
+					
+						상품명  : <%= productList.get(a).getProduct_name()%>
 						<br>
-						가격  :<%= productList.get(a).getProduct_price()%>원
+						가격  : <%= productList.get(a).getProduct_price()%>원 </span>
 						<br>
 						<%for (int j = 0; j <= 11; j++) {%>
 							<% if (b == j+1){ %>
@@ -128,15 +129,16 @@
 							<%} %>
 						<%} %>
 						
-						<form>
-							
-							<br>
-							<span><input type="submit" value="결제하기"></span>
-							<br>
-							
-						</form>
 						
-					</p>
+							
+							<br>
+							<a href = "Buy.jsp?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>"><button>결제하기</button></a>
+							
+							<br>
+						</p>	
+						
+						
+					
 				</div>
 				<div class="col-md-6">
 					<p style="text-align: right;">

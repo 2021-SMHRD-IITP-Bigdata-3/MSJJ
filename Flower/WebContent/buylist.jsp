@@ -1,3 +1,8 @@
+<%@page import="com.moder.StoreDTO"%>
+<%@page import="com.moder.flowerDTO"%>
+<%@page import="com.moder.productDTO"%>
+<%@page import="com.moder.mixDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.moder.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -23,11 +28,21 @@
 <body>
 <%
 	memberDTO info = (memberDTO)session.getAttribute("info");
-	
-	
-	
+	ArrayList<mixDTO> mixList = new ArrayList<mixDTO>();
+	ArrayList<productDTO> productList = new ArrayList<productDTO>();
+	ArrayList<flowerDTO> flowerList2 = new ArrayList<flowerDTO>();
+	ArrayList<StoreDTO> storeList= new ArrayList<StoreDTO>();
+		
 %>
 
+	<% mixList = (ArrayList)session.getAttribute("list");%>
+	<% productList = (ArrayList)session.getAttribute("list2");%>
+	<% flowerList2 = (ArrayList)session.getAttribute("list3");%>
+	<% storeList = (ArrayList)session.getAttribute("list4");%>
+	<% int number = Integer.parseInt(request.getParameter("productNum"));%>
+	<% int a = Integer.parseInt(request.getParameter("num"));%>
+	<%int b= Integer.parseInt(request.getParameter("storeNum")); %>
+	
 	<nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">

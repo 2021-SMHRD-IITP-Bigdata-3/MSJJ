@@ -57,4 +57,5 @@ constraint board_boardnum_pk primary key(board_number)
 
 select * from product
 select * from flower
-
+select * from event
+select event_date - sysdate from event

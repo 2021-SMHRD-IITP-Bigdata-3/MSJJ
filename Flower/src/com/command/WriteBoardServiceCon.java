@@ -21,7 +21,7 @@ public class WriteBoardServiceCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setCharacterEncoding("EUC-KR");
+		request.setCharacterEncoding("UFT-8");
 		
 		// 1. 이미지 경로
 		// getServletContext : 서블릿 정보
@@ -38,7 +38,7 @@ public class WriteBoardServiceCon extends HttpServlet {
 		int maxSize = 5*1024*1024;
 		
 		// 3. 이미지명 인코딩 방식
-		String encoding = "EUC-KR";
+		
 		
 		MultipartRequest multi = new MultipartRequest(request, savePath, maxSize, encoding, new DefaultFileRenamePolicy());
 		
