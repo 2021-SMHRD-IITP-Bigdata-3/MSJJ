@@ -3,7 +3,6 @@ package com.moder;
 public class BoardDTO {
 	
 	private int board_number;
-	
 	private String board_content;
 	private int board_flower;
 	private int board_store;

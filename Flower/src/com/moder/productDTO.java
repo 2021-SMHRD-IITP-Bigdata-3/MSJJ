@@ -12,6 +12,14 @@ public class productDTO {
 	private int product_store;
 	
 	
+	public productDTO(int product_number, String product_name, int product_price, String product_image) {
+		super();
+		this.product_number = product_number;
+		this.product_name = product_name;
+		this.product_price = product_price;
+		this.product_image = product_image;
+	}
+
 	public productDTO(int product_number, String product_mix, String product_name, int product_type, int product_price,
 			String product_image, String product_recomm, int product_store) {
 		super();

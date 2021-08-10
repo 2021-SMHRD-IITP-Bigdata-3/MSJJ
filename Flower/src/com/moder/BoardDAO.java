@@ -126,5 +126,61 @@ public ArrayList<BoardDTO> showProductBoard(int a) {
 	return list;
 }
 
+	public ArrayList<productDTO> showOne(int productNum) {
+		ArrayList<productDTO> list = new ArrayList<productDTO>();
+		try {
+			conn();
+			
+			String sql = "select * from product where product_number = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, productNum);
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				int product_number = rs.getInt("product_number");
+				String product_name = rs.getNString("product_name");	
+				int product_price = rs.getInt("product_price");
+				String product_image = rs.getNString("product_image");
+				productDTO dto = new productDTO(product_number, product_name, product_price, product_image);
+				list.add(dto);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return list;
+	}
+	
+	public ArrayList<BoardDTO> showOneBoard(int a) {
+		ArrayList<BoardDTO> list = new ArrayList<BoardDTO>();
+		
+		try {
+			conn();
+			
+			String sql = "select * from board where board_number = ? order by board_date desc";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, a);
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				int board_number = rs.getInt("board_number");
+				String content = rs.getNString("board_content");
+				int productNum = rs.getInt("board_flower");
+				int storeNum = rs.getInt("board_store");
+				String email = rs.getNString("board_member");
+				String date = rs.getNString("board_date");
+				int score = rs.getInt("board_score");
+				BoardDTO dto = new BoardDTO(board_number, content, productNum, storeNum, email, date, score);
+				list.add(dto);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return list;
+	}
+
 
 }

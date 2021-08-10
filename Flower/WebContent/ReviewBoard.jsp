@@ -64,14 +64,14 @@
        <div style="width:650px; float:left; text-align:left; "><span style="font-family:noto; font-size:25px; line-height:25px; color:#333 ;padding-right:10px;">리뷰게시판</span> <span style="font-family:noto_light; font-size:16px; color:#666">꽃으로 사랑하는 사람에게 진심을 전해보세요.</span>
         </div>
         <div style="width:350px; float:right;  text-align:right">
-            <span style="font-family:noto; font-size:12px; line-height:25px; color:#999;  "><img src="/urbanflower/images/icon_home.gif" width="10" height="10"> <span style="padding:0 10px 0 10px;">&gt;</span>CUSTOMER<span style="padding:0 10px 0 10px;">&gt;</span>리뷰게시판
+            
         </span></div>
        
     </div>
     <!--게시판 css부분 -->
      
 
-   <style>
+ <style>
 /* 게시판 html문 */
 .sub_news,.sub_news th,.sub_news td{border:0}
 .sub_news a{color:#383838;text-decoration:none}
@@ -93,13 +93,15 @@
 <table class="sub_news" border="1" cellspacing="0" summary="게시판의 글제목 리스트" style="margin-left: auto; margin-right: auto;">
 <caption>게시판 리스트</caption>
 <colgroup>
+<col width="50">
 <col>
 <col width="50">
-<col width="50">
+<col width="150">
 <col width="40">
 </colgroup>
 <thead>
 <tr>
+<th scope="col">상품번호</th>
 <th scope="col">내용</th>
 <th scope="col">작성자</th>
 <th scope="col">날짜</th>
@@ -110,8 +112,9 @@
 
 <%for (int i = 0; i < list.size();i++ ){ %>
 <tr>
+<td><%=list.get(i).getBoard_flower()%></td>
 <td class="title">
-<a href="#"><%= list.get(i).getBoard_content() %></a>
+<a href="reviewBoard3ServiceCon?boardNum=<%=list.get(i).getBoard_number()%>&productNum=<%=list.get(i).getBoard_flower()%>"><%= list.get(i).getBoard_content() %></a>
 </td>
 <td class="name"><%= list.get(i).getBoard_member()%></td>
 <td class="date"><%= list.get(i).getBoard_date()%></td>
