@@ -273,7 +273,7 @@
               
             </td>
          </tr>
-      </tobody>
+      </tbody>
    </table>
        <a href="buylistServiceCon?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>&productPrice=<%=productList.get(a).getProduct_price()%>&id=<%=info.getEmail()%>&productName=<%=na%>&productImage=<%=img%>&storeName=<%= stn%>"><input type="button"style="width:1000px" value="결제완료"></a>      
             

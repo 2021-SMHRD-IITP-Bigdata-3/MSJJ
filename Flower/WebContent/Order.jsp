@@ -55,13 +55,13 @@
 				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="Mypage.jsp">마이페이지</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
-				<li><a href="ReviewBoard.jsp">리뷰 </a></li>
+				<li><a href="reviewBoardServiceCon">리뷰 </a></li>
 			   <%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
 				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
-				<li><a href="ReviewBoard.jsp">리뷰</a></li>
+				<li><a href="reviewBoardServiceCon">리뷰</a></li>
 				
 				<%} %>
 			  </ul>
@@ -133,7 +133,7 @@
 							
 							<br>
 							<a href = "Buy.jsp?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>"><button>결제하기</button></a>
-							
+							<a href = "productReviewServiceCon?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>"><button>상품리뷰보기</button></a>
 							<br>
 						</p>	
 						

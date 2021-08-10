@@ -138,13 +138,13 @@
 				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="Mypage.jsp">마이페이지</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
-				<li><a href="ReviewBoard.jsp">리뷰 </a></li>
+				<li><a href="reviewBoardServiceCon">리뷰 </a></li>
 			   <%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
 				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
-				<li><a href="ReviewBoard.jsp">리뷰</a></li>
+				<li><a href="reviewBoardServiceCon">리뷰</a></li>
 				
 				<%} %>
 			  </ul>
@@ -166,7 +166,7 @@
     </div>
 	<div class="wrap">
         <h1></h1>
-        <form name="reviewform" class="reviewform" method="post" action="WriteBoardServiceCon">
+        
             <input type="hidden" name="rate" id="rate" value="0"/>
             <p>
             <img src = <%=productList.get(a).getProduct_image() %>  width="700" height= auto>
@@ -176,25 +176,26 @@
 			<br>
 			매장       :<%= storeList.get(b-1).getStore_name()%>
 			<br>
+			
+			<%session.setAttribute("image",productList.get(a).getProduct_image() ); %>
+			<%session.setAttribute("name",productList.get(a).getProduct_name()); %>
+			<%session.setAttribute("price",productList.get(a).getProduct_price() ); %>
+			<%session.setAttribute("storename",storeList.get(b-1).getStore_name() ); %>
+			<%session.setAttribute("email",info.getEmail() ); %>
+			<%session.setAttribute("productNum",number); %>
+			<%session.setAttribute("storeNum",b); %>
+
+			
 			</p>
-            <p class="title_star">별점과 리뷰를 남겨주세요.</p>
-     		
-            <div class="review_rating">
-                <div class="warning_msg">별점을 선택해 주세요.</div>
-                <div class="rating">
-                    <!-- 해당 별점을 클릭하면 해당 별과 그 왼쪽의 모든 별의 체크박스에 checked 적용 -->
-                    <input type="checkbox" name="rating" id="rating1" value="1" class="rate_radio" title="1점" name = "star">
-                    <label for="rating1"></label>
-                    <input type="checkbox" name="rating" id="rating2" value="2" class="rate_radio" title="2점" name = "star">
-                    <label for="rating2"></label>
-                    <input type="checkbox" name="rating" id="rating3" value="3" class="rate_radio" title="3점" name = "star">
-                    <label for="rating3"></label>
-                    <input type="checkbox" name="rating" id="rating4" value="4" class="rate_radio" title="4점" name = "star">
-                    <label for="rating4"></label>
-                    <input type="checkbox" name="rating" id="rating5" value="5" class="rate_radio" title="5점" name = "star">
-                    <label for="rating5"></label>
-                </div>
-            </div>
+            <p class="title_star">평점과 리뷰를 남겨주세요.</p>
+            <form name="reviewform" class="reviewform" method="post" action="WriteBoardServiceCon">
+            <div>
+            1<input type="radio" style="width:20px;height:20px;border:1px" name="score" value = "1">
+            2<input type="radio" style="width:20px;height:20px;border:1px" name="score" value = "2">
+            3<input type="radio" style="width:20px;height:20px;border:1px" name="score" value = "3">
+            4<input type="radio" style="width:20px;height:20px;border:1px" name="score" value = "4">
+            5<input type="radio" style="width:20px;height:20px;border:1px" name="score" value = "5">
+     		</div>
             <div class="review_contents">
             <tr>
 						<td>작성자</td>
@@ -202,11 +203,15 @@
 					</tr>
                 <div class="warning_msg">5자 이상으로 작성해 주세요.</div>
                 <textarea rows="10" class="review_textarea" name = "content"></textarea>
-            </div>   
-            <div class="cmd">
-                <a href =""><input type="button" name="save" id="save" value="등록"> </a>
             </div>
-        </form>
+            <input type="submit" name="save" id="save" value="등록"> 
+            </form>
+            
+            
+            <div class="cmd">
+                 
+            </div>
+        
     </div>
 
 	

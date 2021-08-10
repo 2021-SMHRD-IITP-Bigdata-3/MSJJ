@@ -1,3 +1,4 @@
+<%@page import="com.moder.BoardDTO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.moder.memberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"    pageEncoding="UTF-8"%>
@@ -20,7 +21,8 @@
 
 <body>
 <%
-	memberDTO info = (memberDTO)session.getAttribute("info");	
+	memberDTO info = (memberDTO)session.getAttribute("info");
+	ArrayList<BoardDTO> list = (ArrayList)session.getAttribute("list");
 %>
 <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
@@ -98,47 +100,25 @@
 </colgroup>
 <thead>
 <tr>
-<th scope="col">제목</th>
+<th scope="col">내용</th>
 <th scope="col">작성자</th>
 <th scope="col">날짜</th>
 <th scope="col">평점</th>
 </tr>
 </thead>
 <tbody>
+
+<%for (int i = 0; i < list.size();i++ ){ %>
 <tr>
 <td class="title">
-<a href="#">게시글 제목</a>
-  
+<a href="#"><%= list.get(i).getBoard_content() %></a>
 </td>
-<td class="name">작성자</td>
-<td class="date">2008/02/14</td>
-<td class="hit">5</td>
+<td class="name"><%= list.get(i).getBoard_member()%></td>
+<td class="date"><%= list.get(i).getBoard_date()%></td>
+<td class="hit"><%= list.get(i).getBoard_score()%></td>
 </tr>
-<tr>
-<td class="title">
-<a href="#">게시글 제목</a>
-  
-</td>
-<td class="name">아이디</td>
-<td class="date">2008/02/14</td>
-<td class="hit">5</td>
-</tr><tr>
-<td class="title">
-<a href="#">게시글 제목</a>
-  
-</td>
-<td class="name">작성자</td>
-<td class="date">2008/02/14</td>
-<td class="hit">5</td>
-</tr><tr>
-<td class="title">
-<a href="#">게시글 제목</a>
-  
-</td>
-<td class="name">작성자</td>
-<td class="date">2008/02/14</td>
-<td class="hit">5</td>
-</tr>
+<%} %>
+
 
 <!-- tr이 제목 1줄입니다 보일 list 갯수만큼 li반복합니다.-->
 </tbody>

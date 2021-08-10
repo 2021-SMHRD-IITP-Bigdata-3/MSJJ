@@ -47,24 +47,24 @@ public void close() {
 	}
 	}
 
-public int upload(BoardDTO dto) {
+public int upload(int productNum, int score, int storeNum, String content, String email) {
 	
 	try {
 		conn();
-		String sql = "insert into web_board values(num_board.nextval,?,?,?,?,sysdate)";
+		String sql = "insert into board values(board_num_seq.nextval,?,?,?,?,sysdate,?)";
 		psmt = conn.prepareStatement(sql);
-		psmt.setString(1, dto.getTitle());
-		psmt.setString(2, dto.getWriter());
-		psmt.setString(3, dto.getFileName());
-		psmt.setString(4, dto.getContent());
+		psmt.setString(1, content);
+		psmt.setInt(2, productNum);
+		psmt.setInt(3, storeNum);
+		psmt.setString(4, email);
+		psmt.setInt(5, score);
 		
 		cnt = psmt.executeUpdate();
 	} catch (SQLException e) {
 		e.printStackTrace();
 	}finally {
 		close();
-	}
-	return cnt;
+	} return cnt;
 }
 
 public ArrayList<BoardDTO> showBoard() {
@@ -73,19 +73,19 @@ public ArrayList<BoardDTO> showBoard() {
 	try {
 		conn();
 		
-		String sql = "select * from web_board order by b_date desc";
+		String sql = "select * from board order by board_date desc";
 		psmt = conn.prepareStatement(sql);
 		rs = psmt.executeQuery();
 		
 		while(rs.next()) {
-			int num = rs.getInt("num");
-			String title = rs.getString("title");
-			String writer = rs.getString("writer");
-			String fileName = rs.getString("fileName");
-			String content = rs.getString("content");
-			String b_date = rs.getString("b_date");
-			
-			BoardDTO dto = new BoardDTO(num, title, writer,fileName,content, b_date);
+			int board_number = rs.getInt("board_number");
+			String content = rs.getNString("board_content");
+			int productNum = rs.getInt("board_flower");
+			int storeNum = rs.getInt("board_store");
+			String email = rs.getNString("board_member");
+			String date = rs.getNString("board_date");
+			int score = rs.getInt("board_score");
+			BoardDTO dto = new BoardDTO(board_number, content, productNum, storeNum, email, date, score);
 			list.add(dto);
 		}
 	} catch (SQLException e) {
@@ -96,30 +96,35 @@ public ArrayList<BoardDTO> showBoard() {
 	return list;
 }
 
-public BoardDTO showOne(int num){
+public ArrayList<BoardDTO> showProductBoard(int a) {
+	ArrayList<BoardDTO> list = new ArrayList<BoardDTO>();
 	
 	try {
 		conn();
-		String sql = "select * from web_board where num=?";
+		
+		String sql = "select * from board where board_flower = ? order by board_date desc";
 		psmt = conn.prepareStatement(sql);
-		psmt.setInt(1, num);
+		psmt.setInt(1, a);
 		rs = psmt.executeQuery();
 		
-		if(rs.next()) {
-			String title = rs.getString("title");
-			String writer = rs.getString("writer");
-			String fileName = rs.getString("fileName");
-			String content = rs.getString("content");
-			String b_date = rs.getString("b_date");
-			
-			dto = new BoardDTO(num, title, writer, fileName, content, b_date);
-		
+		while(rs.next()) {
+			int board_number = rs.getInt("board_number");
+			String content = rs.getNString("board_content");
+			int productNum = rs.getInt("board_flower");
+			int storeNum = rs.getInt("board_store");
+			String email = rs.getNString("board_member");
+			String date = rs.getNString("board_date");
+			int score = rs.getInt("board_score");
+			BoardDTO dto = new BoardDTO(board_number, content, productNum, storeNum, email, date, score);
+			list.add(dto);
 		}
 	} catch (SQLException e) {
-		
 		e.printStackTrace();
 	}finally {
 		close();
-	}return dto;
 	}
+	return list;
+}
+
+
 }

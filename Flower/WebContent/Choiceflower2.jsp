@@ -44,7 +44,7 @@
 					<span class="bar3"></span>
 			  </div class="navbar-brand top" >
 				<a href="index.jsp">
-					<img src="img/logo.png">
+					<img src="img/logo123.png" width="100px" height="80px">
 				</a>
 
 			</div>
@@ -59,13 +59,13 @@
 				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="Mypage.jsp">마이페이지</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
-				<li><a href="reviewBoardServiceCon">리뷰 </a></li>
+				<li><a href="ReviewBoard.jsp">리뷰 </a></li>
 			<%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
 				<li><a href="Market.jsp">상품</a></li>
 				<li><a href="login.jsp">로그인</a></li>
 				<li><a href="join.jsp">회원가입</a></li>
-				<li><a href="reviewBoardServiceCon">리뷰</a></li>
+				<li><a href="ReviewBoard.jsp">리뷰</a></li>
 			<%} %>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
@@ -76,13 +76,22 @@
 
 
     <!-- Intro -->
-	<
+	<div class="rows navi_category" style="width:1000px; margin:0 auto; ">
+    	<div style="width:650px; float:left; text-align:left; "><span style="font-family:noto; font-size:25px; line-height:25px; color:#333 ;padding-right:10px;">나만의 꽃선물</span> <span style="font-family:noto_light; font-size:16px; color:#666">꽃으로 사랑하는 사람에게 진심을 전해보세요.</span>
+        </div>
+        <div style="width:350px; float:right;  text-align:right">
+            <span style="font-family:noto; font-size:12px; line-height:25px; color:#999;  "><img src="/urbanflower/images/icon_home.gif" width="10" height="10"> <span style="padding:0 10px 0 10px;">&gt;</span>CUSTOMER<span style="padding:0 10px 0 10px;">&gt;</span>나만의 꽃선물
+        </span></div>
+       
+    </div>
+    <br>
+    <br>
 
 	
 	<!-- Slider -->
 <form align="center" action = "recommServiceCon" method = "post">
-	<h1 align = "center">기념일 또는 꽃말을 선택하세요.</h1>
-	<br><br>
+	<h2 align = "center">기념일 또는 꽃말을 선택하세요.</h2>
+	<br>
 	<select style= "width:200px;height:50px" name="eventDay">
 		<option value="미선택">기념일</option>
 		<option value="발렌타인데이">발렌타인데이</option>
@@ -122,7 +131,7 @@
 	<!-- About 주문상품 그림& 설명-->
 	
 	<!-- Gallery -->
-	<h1 align = "center">포장을 고르세요.</h1>
+	
 	<br><br>
 	<table align="center" border-collapse = collapse; border-spacing = 0;>
 	<tr>
@@ -159,7 +168,6 @@
 	<td>
 	</tr>
 	</table>
-
 </form>
 
 <% mixList = (ArrayList)session.getAttribute("list");%>

@@ -61,3 +61,4 @@ select * from flower
 select * from event
 select event_date - sysdate from event
 select * from buy
+select * from board

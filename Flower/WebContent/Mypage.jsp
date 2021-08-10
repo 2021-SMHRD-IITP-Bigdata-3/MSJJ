@@ -350,7 +350,7 @@ scrollbar-arrow-color: #838383;
 <tbody><tr>
 <td id="avoidDbl" align="center" height="100">
 <div style="width:100%" class="noline"><input type="submit" value="회원정보변경">
-<input type="butten"  style=" width:118px; border-width:1px; background-color:#EFEFEF;" value="구매내역가기" onClick="location.href='buylist.jsp'">
+<a href ="showBuyServiceCon?id=<%=info.getEmail()%>"><input type="button"  style=" width:118px; border-width:1px; background-color:#EFEFEF;" value="구매내역가기"></a>
 </div>
 
 </div>
