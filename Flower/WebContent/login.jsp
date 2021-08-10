@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Nevada - Free HTML Bootstrap Template</title>
+    <title>로그인</title>
 
     <!-- Css -->
     <link href="css/bootstrap.css" rel="stylesheet">

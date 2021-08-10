@@ -16,7 +16,7 @@ public class updateServiceCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setCharacterEncoding("EUC-KR");
+		request.setCharacterEncoding("UTF-8");
 		
 		// 수정하고 싶은 pw, tel, addr 값 받아오기
 		String pw = request.getParameter("pw");

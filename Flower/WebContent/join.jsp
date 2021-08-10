@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Nevada - Free HTML Bootstrap Template</title>
+    <title>회원가입</title>
 
     <!-- Css -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -64,7 +64,7 @@ margin-top: -400px;
 					<span class="bar2"></span>
 					<span class="bar3"></span>
 			  </div class="navbar-brand top">
-				<a  href="index.jsp">
+				<a href="index.jsp">
 					<img src="img/logo.png">
 				</a>
 
