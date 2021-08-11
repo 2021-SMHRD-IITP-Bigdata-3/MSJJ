@@ -198,6 +198,56 @@ public class recommDAO {
 		}finally {
 			close();
 		}return list4;
-		
 	}
+		public ArrayList<productDTO> recomm_product2(ArrayList<mixDTO> list, String flowerType,int mainNum) {
+			try {
+				conn();
+				switch (mainNum){
+					case 1:
+						mainNum = 211001;
+						break;
+					case 2:
+						mainNum = 201016;
+						break;
+					case 3:
+						mainNum = 203013;
+						break;
+					case 4:
+						mainNum = 201011;
+						break;
+				}
+				System.out.println(mainNum);
+				
+					String sql = "select * from product where product_number=?";
+					psmt = conn.prepareStatement(sql);
+					psmt.setInt(1, mainNum);
+				
+					rs= psmt.executeQuery();
+					
+					while(rs.next()) {
+						if (rs != null) {
+							int num = Integer.parseInt(rs.getString(1));
+							String productMix = rs.getString(2);
+							String productName = rs.getString(3);
+							int productType = Integer.parseInt(rs.getString(4));
+							int productPrice = Integer.parseInt(rs.getString(5));
+							String productImage = rs.getString(6);
+							String productRecomm = rs.getString(7);
+							int productStore = Integer.parseInt(rs.getNString(8));
+							productDTO dto = new productDTO(num, productMix, productName, productType, productPrice, productImage, productRecomm, productStore);
+							list2.add(dto);
+							System.out.println("dto에 들어감"+productMix);
+						}
+					}
+							
+				
+				
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}finally {
+				close();
+			}return list2;
+		}
+		
+	
 }

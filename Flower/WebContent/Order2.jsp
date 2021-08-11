@@ -74,14 +74,14 @@
     <!-- Intro -->
 	
 	<!-- About 주문상품 그림& 설명-->
-	<% int number = Integer.parseInt(request.getParameter("number"));%>
-	<% int a = Integer.parseInt(request.getParameter("listNum"));%>
-	
+	<% int number = (Integer)session.getAttribute("number");%>
+	<% int a = (Integer)session.getAttribute("listNum");%>
+	<% int b = (Integer)session.getAttribute("storeNum");%>
 	<% mixList = (ArrayList)session.getAttribute("list");%>
 	<% productList = (ArrayList)session.getAttribute("list2");%>
 	<% flowerList2 = (ArrayList)session.getAttribute("list3");%>
 	<% storeList = (ArrayList)session.getAttribute("list4");%>
-	<%int b= productList.get(a).getProduct_store(); %>
+	
 	
 	<% System.out.println(number);%>
 	<% System.out.println(flowerList2.size());%>
