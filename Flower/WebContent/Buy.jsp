@@ -43,6 +43,8 @@
 	<% int number = Integer.parseInt(request.getParameter("productNum"));%>
 	<% int a = Integer.parseInt(request.getParameter("num"));%>
 	<%int b= Integer.parseInt(request.getParameter("storeNum")); %>
+	<% System.out.println(b); %>
+	<% System.out.println(storeList.size()); %>
    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
          <div class="navbar-header">
@@ -61,13 +63,13 @@
             <ul class="nav navbar-nav navbar-right">
             <%if(info != null){ %>
             <li><a href="Choiceflower.jsp">꽃추천</a></li>
-            <li><a href="Market.jsp">상품</a></li>
+            
             <li><a href="Mypage.jsp">마이페이지</a></li>
             <li><a href="logoutServiceCon">로그아웃</a></li>
             <li><a href="ReviewBoard.jsp">리뷰 </a></li>
             <%}else{ %>
             <li><a href="Choiceflower.jsp">꽃추천</a></li>
-            <li><a href="Market.jsp">상품</a></li>
+            
             <li><a href="login.jsp">로그인</a></li>
             <li><a href="join.jsp">회원가입</a></li>
             <li><a href="ReviewBoard.jsp">리뷰</a></li>
@@ -102,11 +104,7 @@
          <div style="width:400px; float:right; text-align:right">
              <span style="font-family;noto; font-size:12px; line-height:25px; color:#999;">
             <img src="아이콘" width="10" height="10">
-            <span style="padding:0 10px 0 10px;">></span>
-            CUSTOMER
-            <span style="padding:0 10px 0 10px;">></span>
-            주문하기
-            </span>
+            
             </div>
             </div>
       <div class="indiv">
@@ -119,7 +117,12 @@
          <br><br><br>
 <% String img = productList.get(a).getProduct_image(); %>
 <% String na = productList.get(a).getProduct_name(); %>
-<% String stn = storeList.get(b-1).getStore_name(); %>
+<% String stn = ""; %>
+<% if (storeList.size() == 1){
+	stn = storeList.get(0).getStore_name();	
+	}else{
+	stn = storeList.get(b-1).getStore_name(); 
+}%>
       <div class = "rows_indi_item">
          <div style = "width:739px; float:right; text-align:center">
             <img src = <%= img %>  width="700" height= auto>
@@ -325,7 +328,7 @@
    <!-- Copyright -->
    <footer>
       <div class="container">
-         <p class="text-center">Â© 2016 - Designed by <a href="http://www.nicolatolin.com">Nicola Tolin</a></p>
+         
       </div>
    </footer>
    

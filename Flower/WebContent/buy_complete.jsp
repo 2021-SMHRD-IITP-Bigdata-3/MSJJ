@@ -40,12 +40,8 @@
 	<% productList = (ArrayList)session.getAttribute("list2");%>
 	<% flowerList2 = (ArrayList)session.getAttribute("list3");%>
 	<% storeList = (ArrayList)session.getAttribute("list4");%>
-	
-	
 	<% int number = (Integer)session.getAttribute("productNum");%>
-	
 	<% int a = (Integer)session.getAttribute("num");%>
-	
 	<% int b = (Integer)session.getAttribute("storeNum");%>
 	
 	
@@ -67,16 +63,16 @@
             <ul class="nav navbar-nav navbar-right">
             <%if(info != null){ %>
             <li><a href="Choiceflower.jsp">꽃추천</a></li>
-            <li><a href="Market.jsp">상품</a></li>
+            
             <li><a href="Mypage.jsp">마이페이지</a></li>
             <li><a href="logoutServiceCon">로그아웃</a></li>
-            <li><a href="ReviewBoard.jsp">리뷰 </a></li>
+            <li><a href="reviewBoardServiceCon">리뷰 </a></li>
             <%}else{ %>
             <li><a href="Choiceflower.jsp">꽃추천</a></li>
-            <li><a href="Market.jsp">상품</a></li>
+            
             <li><a href="login.jsp">로그인</a></li>
             <li><a href="join.jsp">회원가입</a></li>
-            <li><a href="ReviewBoard.jsp">리뷰</a></li>
+            <li><a href="reviewBoardServiceCon">리뷰</a></li>
             
             <%} %>
            </ul>
@@ -95,11 +91,12 @@
    
    
    
-   <h1>결제가 완료 되었습니다.</h1>
-   <a href="WriteBoard.jsp?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>"><input type="button"style="width:1000px" value="리뷰 쓰러가기"></a>
-   <a href="showBuyServiceCon?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>&id=<%=info.getEmail()%>"><input type="button"style="width:1000px" value="구매내역으로"></a>
-   <a href="index.jsp"><input type="button"style="width:1000px" value="메인으로"></a>      
-            
+   <h1 align = "center">결제가 완료 되었습니다.</h1>
+   <div>
+   <a href="WriteBoard.jsp?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>"><input type="button"style="width:33%" value="리뷰 쓰러가기"></a>
+   <a href="showBuyServiceCon?num=<%=a %>&productNum=<%=number%>&storeNum=<%=b%>&id=<%=info.getEmail()%>"><input type="button" style="width:33%" value="구매내역으로"></a>
+   <a href="index.jsp"><input  type="button" style= "width:33%" value="메인으로"></a>      
+   </div>    
             
             
       
@@ -148,7 +145,7 @@
    <!-- Copyright -->
    <footer>
       <div class="container">
-         <p class="text-center">Â© 2016 - Designed by <a href="http://www.nicolatolin.com">Nicola Tolin</a></p>
+         
       </div>
    </footer>
    

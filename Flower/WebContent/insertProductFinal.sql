@@ -820,5 +820,3 @@ insert into product
 values(312009, '분홍장미_수국','행복한 사랑_진심', 3 ,90000, '"./img/12/3/312009.jpg"', 'T', 12);
 insert into product 
 values(412001, '빨강장미','열렬한 사랑', 4 ,100000, '"./img/12/4/412001.jpg"', 'T', 12);
-
-update product set product_image = '"./img/4/2/rr_wm_2.jpg"' where product_number = 204011;

@@ -74,14 +74,14 @@ margin-top: -400px;
 			   <ul class="nav navbar-nav navbar-right">
 				<%if(info != null){ %>
 			   <li><a href="Choiceflower.jsp">꽃추천</a></li>
-				<li><a href="Market2.jsp">상품</a></li>
-				<li><a href="Mypage2.jsp">마이페이지</a></li>
+				
+				<li><a href="Mypage.jsp">마이페이지</a></li>
 				<li><a href="logoutServiceCon">로그아웃</a></li>
 			   <%}else{ %>
 				<li><a href="Choiceflower.jsp">꽃추천</a></li>
-				<li><a href="Market2.jsp">상품</a></li>
-				<li><a href="login2.jsp">로그인</a></li>
-				<li><a href="join3.jsp">회원가입</a></li>
+				
+				<li><a href="login.jsp">로그인</a></li>
+				<li><a href="join.jsp">회원가입</a></li>
 				<%} %>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
@@ -98,8 +98,8 @@ margin-top: -400px;
     	<div style="width:650px; float:left; text-align:left; "><span style="font-family:noto; font-size:25px; line-height:25px; color:#333 ;padding-right:10px;">로그인</span> <span style="font-family:noto_light; font-size:16px; color:#666"></span>
         </div>
         <div style="width:350px; float:right;  text-align:right">
-            <span style="font-family:noto; font-size:12px; line-height:25px; color:#999;  "><img src="/urbanflower/images/icon_home.gif" width="10" height="10"> <span style="padding:0 10px 0 10px;">&gt;</span>CUSTOMER<span style="padding:0 10px 0 10px;">&gt;</span>로그인
-        </span></div>
+            
+        </div>
     </div>
     <!-- 로그인 -->
     
@@ -234,7 +234,7 @@ margin-top: -400px;
 	<!-- Copyright -->
 	<footer>
 		<div class="container">
-			<p class="text-center">Â© 2016 - Designed by <a href="http://www.nicolatolin.com">Nicola Tolin</a></p>
+			
 		</div>
 	</footer>
 	

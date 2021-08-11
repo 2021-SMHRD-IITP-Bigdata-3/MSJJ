@@ -44,6 +44,3 @@ insert into product
 values(101022, '하얀장미','존경_순수한 사랑', 1 ,4000, '"./img/one/101022.jpg"', 'T', 1);
 insert into product 
 values(101023, '해바라기','존경_진심', 1 ,4000, '"./img/one/101023.jpg"', 'T', 1);
-
-select * from store;
-

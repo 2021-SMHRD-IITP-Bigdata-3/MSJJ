@@ -174,13 +174,19 @@
 			<br>
 			상품가격  :<%= productList.get(a).getProduct_price() %>원
 			<br>
-			매장       :<%= storeList.get(b-1).getStore_name()%>
+			<%String stn = ""; 
+			if (storeList.size() == 1){
+				stn = storeList.get(0).getStore_name();	
+			}else{
+				stn = storeList.get(b-1).getStore_name(); 
+			}%>
+			매장       :<%= stn%>
 			<br>
 			
 			<%session.setAttribute("image",productList.get(a).getProduct_image() ); %>
 			<%session.setAttribute("name",productList.get(a).getProduct_name()); %>
 			<%session.setAttribute("price",productList.get(a).getProduct_price() ); %>
-			<%session.setAttribute("storename",storeList.get(b-1).getStore_name() ); %>
+			<%session.setAttribute("storename", stn ); %>
 			<%session.setAttribute("email",info.getEmail() ); %>
 			<%session.setAttribute("productNum",number); %>
 			<%session.setAttribute("storeNum",b); %>

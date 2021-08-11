@@ -10,8 +10,3 @@ insert into event
 values( '스승의 날', to_date('05-15' , 'MM-DD'));
 insert into event 
 values( '고백데이', to_date('09-17' , 'MM-DD'));
-
-
-
-
-

@@ -468,9 +468,3 @@ insert into store
 values(11, '꽃드리움', '0507-1313-5489','광주 동구 충장로 58번길 14 고운라피네 상가 104호','./img/store/11.jpg');
 insert into store 
 values(12, '꽃, 열음', '010-5298-5068','광주 서구 화정로 244번길 21','./img/store/12.jpg');
-
-
-
-
-
-
