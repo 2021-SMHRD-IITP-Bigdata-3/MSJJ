@@ -61,6 +61,20 @@ public class recommServiceCon2 extends HttpServlet {
 		
 		ArrayList<StoreDTO> list4 = new ArrayList<StoreDTO>();
 		list4 = dao.recomm_store(list2);
+		switch (mainNum){
+		case 1:
+			mainNum = 211001;
+			break;
+		case 2:
+			mainNum = 201016;
+			break;
+		case 3:
+			mainNum = 203013;
+			break;
+		case 4:
+			mainNum = 201011;
+			break;
+	}
 		System.out.println(mainNum);
 		
 		String moveURL = "";

@@ -21,6 +21,7 @@ public class productReviewServiceCon extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession();
 		int productNum = Integer.parseInt(request.getParameter("productNum"));
+		System.out.println("리뷰 페이지 상품번호 : "+ productNum);
 		BoardDAO dao = new BoardDAO();
 		ArrayList<BoardDTO> list = dao.showProductBoard(productNum);
 		

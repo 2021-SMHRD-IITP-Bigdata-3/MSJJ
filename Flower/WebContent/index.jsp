@@ -99,7 +99,8 @@
 					<div class="hovereffect">
 						<div class="col-md-12 photo-1"></div>
 				
-							<a href="recommServiceCon2?eventDay=미선택&flowerMean=순수한 사랑&flowerType=2&mainNum=1">
+				
+							<a href="recommServiceCon2?eventDay='미선택'&flowerMean='순수한 사랑'&flowerType=2&mainNum=1">
 								<div class="overlay">
 									<h2>꽃을 보니 니가 생각나서..</h2>
 									<p>8월에 어울리는..</p> 
@@ -132,7 +133,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-3"></div>
-							<a href="recommServiceCon2?eventDay=미선택&flowerMean=행복한 사랑&flowerType=2&mainNum=3">
+							<a href="recommServiceCon2?eventDay='미선택'&flowerMean='행복한 사랑'&flowerType=2&mainNum=3">
 								<div class="overlay">
 									<h2>넌 나의 완소녀</h2>
 									<p>완소녀</p> 
@@ -145,7 +146,7 @@
 				<div class="col-md-6 thumbnail">
 					<div class="hovereffect">
 						<div class="col-md-12 photo-4"></div>
-							<a href="recommServiceCon2?eventDay=미선택&flowerMean=행복한 사랑&flowerType=2&mainNum=4">
+							<a href="recommServiceCon2?eventDay='미선택'&flowerMean='행복한 사랑'&flowerType=2&mainNum=4">
 								<div class="overlay">
 									<h2>나의 행복은...  </h2>
 									<p>바로 당신</p> 

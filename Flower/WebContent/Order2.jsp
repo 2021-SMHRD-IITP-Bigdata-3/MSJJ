@@ -85,6 +85,8 @@
 	
 	<% System.out.println(number);%>
 	<% System.out.println(flowerList2.size());%>
+	<%System.out.println("Order2의 mixList"+mixList.size()); %>
+	<%System.out.println("Order2의 storeList"+storeList.size()); %>
 	<section class="about" id="about">
 		<div class="container about">
 			<div class="row">
@@ -99,14 +101,12 @@
 						<br>
 						가격  : <%= productList.get(a).getProduct_price()%>원 
 						<br>
-						<%for (int j = 0; j <= 11; j++) {%>
-							<% if (b == j+1){ %>
-								매장명 : <%= storeList.get(j).getStore_name()%><br>
-								매장주소 : <%= storeList.get(j).getStore_adress()%><br>
-								매장전화번호 : <%= storeList.get(j).getStore_tel()%>
-							<%} %>
-						<%} %>
+								매장명 : <%= storeList.get(0).getStore_name()%><br>
+								매장주소 : <%= storeList.get(0).getStore_adress()%><br>
+								매장전화번호 : <%= storeList.get(0).getStore_tel()%>
+						
 						<br>
+						
 						<%for (int j=0; j < mixList.size();j++) {%>
 							<%if(productList.get(a).getProduct_mix().equals(mixList.get(j).getMix_flower())){%>
 								<%String [] useFlower = mixList.get(j).getMix_flower().split("_"); %>
